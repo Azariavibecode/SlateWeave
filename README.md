@@ -61,7 +61,7 @@ get_counts()
 
 The frontend uses `genlayer-js`, checks finalized consensus and leader execution, validates the returned value, and reads back the exact affected ballot before confirming success. It clears selected state on ID/deployment changes and invalidates stale asynchronous reads.
 
-See [architecture](docs/ARCHITECTURE.md), [threat model](docs/THREAT_MODEL.md), [claim-to-invariant mapping](verification/CLAIM_TO_INVARIANT.md), [source manifest](verification/SOURCE_MANIFEST.md), and [live test plan](verification/E2E_PLAN.md).
+See [architecture](docs/ARCHITECTURE.md), [threat model](docs/THREAT_MODEL.md), [claim-to-invariant mapping](verification/CLAIM_TO_INVARIANT.md), [source manifest](verification/SOURCE_MANIFEST.md), [live test plan](verification/E2E_PLAN.md), [actual StudioNet transaction ledger](verification/STUDIONET_E2E.md), and [separate browser read-only checks](verification/UI_READONLY.md).
 
 ## Current verification status
 
