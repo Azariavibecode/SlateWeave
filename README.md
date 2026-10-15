@@ -42,7 +42,7 @@ npm --prefix frontend run build
 npm --prefix frontend run dev
 ```
 
-The production frontend is configured for SlateWeave deployment `0xf04875D5FF900C87aFa08C84cb2D14c4daCb73Ff` on StudioNet. The Deployment control still permits independent deployments. The default creation form uses synthetic fixture commit `69437673e180f414efe6565a14b266110427845c`; authors and voters remain chosen by the user, not hardcoded test wallets.
+The production frontend is live at [slateweave.pages.dev](https://slateweave.pages.dev) and configured for SlateWeave deployment `0xf04875D5FF900C87aFa08C84cb2D14c4daCb73Ff` on StudioNet. The Deployment control still permits independent deployments. The default creation form uses synthetic fixture commit `69437673e180f414efe6565a14b266110427845c`; authors and voters remain chosen by the user, not hardcoded test wallets.
 
 ## Public methods
 
@@ -61,7 +61,7 @@ get_counts()
 
 The frontend uses `genlayer-js`, checks finalized consensus and leader execution, validates the returned value, and reads back the exact affected ballot before confirming success. It clears selected state on ID/deployment changes and invalidates stale asynchronous reads.
 
-See [architecture](docs/ARCHITECTURE.md), [threat model](docs/THREAT_MODEL.md), [claim-to-invariant mapping](verification/CLAIM_TO_INVARIANT.md), [source manifest](verification/SOURCE_MANIFEST.md), [live test plan](verification/E2E_PLAN.md), [actual StudioNet transaction ledger](verification/STUDIONET_E2E.md), and [separate browser read-only checks](verification/UI_READONLY.md).
+See [architecture](docs/ARCHITECTURE.md), [threat model](docs/THREAT_MODEL.md), [claim-to-invariant mapping](verification/CLAIM_TO_INVARIANT.md), [source manifest](verification/SOURCE_MANIFEST.md), [live test plan](verification/E2E_PLAN.md), [actual StudioNet transaction ledger](verification/STUDIONET_E2E.md), [separate browser read-only checks](verification/UI_READONLY.md), and [Cloudflare deployment verification](verification/cloudflare-deployment.md).
 
 ## Current verification status
 
@@ -69,4 +69,4 @@ For independent wallet testing, follow the [reviewer guide](docs/REVIEWER_GUIDE.
 
 45 direct contract tests and 9 UI transport/action/ID tests pass. Production frontend builds. Desktop and mobile initial-screen/form checks have been performed. The deployed source exactly matches the repository file. Live SDK E2E is recorded under `verification/live/0xf04875d5ff900c87afa08c84cb2d14c4dacb73ff/`; only finalized recorded transactions constitute live evidence, not the prospective test plan or local mock results.
 
-Both live suites are complete: **47 finalized transactions**, **18 rejected-call no-mutation checks**, bounded ambiguous-evidence termination and the synthetic prompt-injection case. An independent RPC audit re-read all 47 hashes and verified finality, majority result, successful leader execution, sender/recipient and exact return. The winning slate `[1,2]`, score 140, cost 40 matches independent subset enumeration. No natural validator disagreement or leader rotation was observed; this is not a live recovery-from-disagreement claim. Browser checks are read-only state synchronization, not browser-wallet signing E2E. Public frontend hosting is not yet claimed.
+Both live suites are complete: **47 finalized transactions**, **18 rejected-call no-mutation checks**, bounded ambiguous-evidence termination and the synthetic prompt-injection case. An independent RPC audit re-read all 47 hashes and verified finality, majority result, successful leader execution, sender/recipient and exact return. The winning slate `[1,2]`, score 140, cost 40 matches independent subset enumeration. No natural validator disagreement or leader rotation was observed; this is not a live recovery-from-disagreement claim. Browser checks are read-only state synchronization, not browser-wallet signing E2E. The public Cloudflare build was verified byte-for-byte against all five local production assets.

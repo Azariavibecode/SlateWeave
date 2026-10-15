@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "verified_on": "2026-10-15",
+  "provider": "Cloudflare Pages",
+  "project": "slateweave",
+  "environment": "Production",
+  "branch": "main",
+  "source_commit": "680cd506bd959ffb46dfc19a1c1b71471ad10d3a",
+  "deployment_id": "fc2c9d23-87be-4594-8597-888dc9b6eef9",
+  "production_url": "https://slateweave.pages.dev",
+  "deployment_url": "https://fc2c9d23.slateweave.pages.dev",
+  "contract_address": "0xf04875D5FF900C87aFa08C84cb2D14c4daCb73Ff",
+  "verification": {
+    "production_http_status": 200,
+    "all_assets_http_200": true,
+    "all_asset_sha256_match": true,
+    "compiled_bundle_contains_contract_address": true,
+    "asset_count": 5
+  },
+  "assets": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "sha256": "2f15313932838332c2bc96524187b31781b51ea525c468c4057e2bd515e0f658"
+    },
+    {
+      "path": "slateweave-logo.png",
+      "status": 200,
+      "sha256": "d82555a21365052d1ef4ee80e43d5f4a1c724c0a200d06ea6970c5effb3fb7b2"
+    },
+    {
+      "path": "assets/ccip-DerrcpdD.js",
+      "status": 200,
+      "sha256": "e40e2d0fbe5534ba07498619cbcf7d71c2641781a422b3393d8890b8adb1aeef"
+    },
+    {
+      "path": "assets/index-Cc3QVQN2.js",
+      "status": 200,
+      "sha256": "e6e75225a902527871284350c62eee7bd9c8b90e9c6c1c64a82483dfddf619a8"
+    },
+    {
+      "path": "assets/index-VPYW7aQZ.css",
+      "status": 200,
+      "sha256": "1ea64822e6e16f8a0c6381f06cb28586bef2574f532a69ed7fe04c87c23057f4"
+    }
+  ],
+  "notes": [
+    "The Cloudflare API token was supplied at runtime and was not written to the repository.",
+    "Asset hashes were computed locally and compared with bytes fetched from the production domain after deployment.",
+    "The deployment URL was recorded by Wrangler; the production domain is the stable reviewer URL."
+  ]
+}

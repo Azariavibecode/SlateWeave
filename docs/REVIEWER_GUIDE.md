@@ -12,7 +12,7 @@ node frontend/node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 5182
 
 Alternatively run `npm --prefix frontend run dev` with `VITE_CONTRACT_ADDRESS` set to the deployment address. The production environment file already sets the submitted deployment. The Deployment panel lets you inspect or override the exact address and open Explorer.
 
-Use StudioNet, chain ID **61999**, and a funded test wallet. Do not use mainnet assets. The contract does not custody or transfer tokens.
+Open the public frontend at https://slateweave.pages.dev. Use StudioNet, chain ID **61999**, and a funded test wallet. Do not use mainnet assets. The contract does not custody or transfer tokens.
 
 ## Inspect existing evidence without signing
 
