@@ -29,7 +29,7 @@ Only A and B are necessary: on the failure ballot A is creator and B attempts un
 - Naturally occurring validator disagreement: save all rounds and votes. Do not claim a live disagreement if none occurs, or a successful recovery while unresolved.
 - Different caller order and repeated pair requests must preserve the same completed graph. Pair source snapshot is fixed and cannot change between retries.
 
-The first runner automates the primary lifecycle and deterministic attacks. The additional semantic cases are required follow-ups, not already-run evidence.
+The default runner automates the primary lifecycle and deterministic attacks. After it completes, run the same script with `E2E_SUITE=semantic` to execute the ambiguous and injection ballots in a separate report. Run suites sequentially so complete-counter snapshots remain attributable to one test transaction. Prepared automation is not already-run evidence.
 
 ## Artifact requirements
 

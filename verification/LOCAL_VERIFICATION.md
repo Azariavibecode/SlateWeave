@@ -11,4 +11,4 @@ Current checks on 2026-10-15:
 
 Direct model and comparative-judge responses are mocked. The wrong-leader test independently re-evaluates a pair and supplies a deterministic comparison mock; it proves the validator wiring rejects a conflicting leader relationship under that mock. It does not measure real model reliability.
 
-The source fixture is synthetic and has not yet been pinned to a public repository commit. There is no SlateWeave StudioNet deployment, public hosting deployment, or live E2E claim at this stage.
+The synthetic fixture is now pinned to public commit `69437673e180f414efe6565a14b266110427845c`. The user deployed contract `0xf04875D5FF900C87aFa08C84cb2D14c4daCb73Ff`; SDK readback confirms exact source equality (SHA-256 `d4ace3bea0f610214af25fa8f99d7e5613d083dde0d57e22b05bed70236a5bfc`). Live E2E progress is recorded separately under `verification/live/`; local pass counts do not imply completion of that suite. No public frontend hosting deployment is claimed here.

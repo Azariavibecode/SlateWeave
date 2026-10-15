@@ -10,7 +10,8 @@ const accounts=[process.env.TEST_WALLET_A_PRIVATE_KEY,process.env.TEST_WALLET_B_
 if(accounts[0].address.toLowerCase()===accounts[1].address.toLowerCase())throw Error("Distinct auxiliary wallets required");
 const reader=createClient({chain:studionet});
 const folder=`verification/live/${address.toLowerCase()}`;mkdirSync(folder,{recursive:true});
-const path=`${folder}/studionet-suite.json`;
+const semantic=process.env.E2E_SUITE==="semantic";
+const path=`${folder}/${semantic?"semantic-suite":"studionet-suite"}.json`;
 const fixture={owner:process.env.FIXTURE_OWNER,repo:process.env.FIXTURE_REPO,commit:process.env.FIXTURE_COMMIT,path:"/fixtures/agenda.md",digest:process.env.FIXTURE_DIGEST};
 const source=marker=>({...fixture,marker});
 const report=existsSync(path)?JSON.parse(readFileSync(path,"utf8")):{address,chain_id:61999,network:"StudioNet",started_at:new Date().toISOString(),fixture,wallets:accounts.map(a=>a.address),expected_before_execution:{relations:{"0:1":"MUTUALLY_EXCLUSIVE","0:2":"COMPATIBLE","1:2":"COMPATIBLE"},votes:[[60,0,40],[0,70,30]],winning_indices:[1,2],winning_score:140,source_failure:"SOURCE_UNVERIFIED without mutation",replays:"Rejected without mutation",conflict:"Record naturally observed disagreement; do not manufacture or overstate it"},transactions:[],cases:{}};
@@ -28,11 +29,11 @@ async function submit(actor,method,args,label){
   const hash=await createClient({chain:studionet,account:accounts[actor]}).writeContract({address,functionName:method,args});
   item={label,hash,actor:accounts[actor].address,method,explorer_url:`https://explorer-studio.genlayer.com/transactions/${hash}`};report.transactions.push(item);save();console.log(label,hash);
  }
- if(item.finalized)return item.returned;
+ if(item.finalized){if(item.consensus!=="MAJORITY_AGREE"||item.execution!=="SUCCESS")throw Error(`${label}: consensus/execution failed`);return item.returned;}
  await retryRead(()=>reader.waitForTransactionReceipt({hash:item.hash,status:"FINALIZED",interval:15000,retries:120}));
  const tx=await retryRead(()=>reader.getTransaction({hash:item.hash}));const leader=tx.consensus_data?.leader_receipt?.find(r=>r.mode==="leader");
  let returned;try{returned=JSON.parse(leader?.result?.payload?.readable)}catch{returned=leader?.result?.payload?.readable}
- Object.assign(item,{finalized:true,status:"FINALIZED",consensus:tx.result_name,execution:leader?.execution_result,returned,rounds:(tx.consensus_history?.consensus_results||[]).map(r=>({round:r.consensus_round,status_changes:r.status_changes,validators:r.validator_results?.map(v=>({vote:v.vote,execution:v.execution_result}))}))});save();console.log(label,item.consensus,returned);return returned;
+ Object.assign(item,{finalized:true,status:"FINALIZED",consensus:tx.result_name,execution:leader?.execution_result,returned,rounds:(tx.consensus_history?.consensus_results||[]).map(r=>({round:r.consensus_round,status_changes:r.status_changes,validators:r.validator_results?.map(v=>({vote:v.vote,execution:v.execution_result}))}))});save();console.log(label,item.consensus,returned);if(item.consensus!=="MAJORITY_AGREE"||item.execution!=="SUCCESS")throw Error(`${label}: consensus/execution failed`);return returned;
 }
 function expect(actual,expected,label){if(actual!==expected)throw Error(`${label}: expected ${expected}; got ${actual}`)}
 async function unchanged(id,actor,method,args,label,expected){
@@ -46,6 +47,32 @@ const code=await retryRead(()=>reader.getContractCode(address)),local=readFileSy
 report.deployment={source_matches:code===local,source_sha256:createHash("sha256").update(code).digest("hex")};save();if(code!==local)throw Error("Deployed source mismatch");
 function config(label,bad=false){return{label,budget:100,max_selected:3,policy:{...source("## POLICY Q4"),...(bad?{digest:"0".repeat(64)}:{})},voters:accounts.map(a=>a.address),options:[{title:"Audit priority",cost:60,author:accounts[0].address,source:source("## OPTION AUDIT")},{title:"Incentive priority",cost:40,author:accounts[1].address,source:source("## OPTION INCENTIVES")},{title:"Transparency report",cost:0,author:accounts[0].address,source:source("## OPTION REPORTING")}]}}
 async function create(label,bad=false){const id=await submit(0,"create_ballot",[JSON.stringify(config(label,bad))],label);if(!Number.isSafeInteger(id)||id<0)throw Error(`Creation failed: ${id}`);return id}
+if(semantic){
+ report.expected_before_execution={ambiguous:"INSUFFICIENT three times then UNRESOLVED; voting blocked",injection:"MUTUALLY_EXCLUSIVE; embedded command has no authority",replay:"Resolved pair unchanged"};save();
+ for(const [name,marker,relation]of[["ambiguous","## OPTION AMBIGUOUS","INSUFFICIENT"],["injection","## OPTION INJECTION","MUTUALLY_EXCLUSIVE"]]){
+  const cfg=config(name);cfg.options=cfg.options.slice(0,2);cfg.max_selected=2;cfg.options[1].source=source(marker);
+  const id=await submit(0,"create_ballot",[JSON.stringify(cfg)],`${name}_create`);
+  if(!Number.isSafeInteger(id)||id<0)throw Error(`Creation failed: ${id}`);
+  let b=await record(id);const commitment=b.commitment;
+  expect(await submit(0,"accept_ballot",[BigInt(id),commitment],`${name}_consent_a`),"CONSENT_RECORDED",name);
+  expect(await submit(1,"accept_ballot",[BigInt(id),commitment],`${name}_consent_b`),"READY_TO_GROUND",name);
+  expect(await submit(1,"ground_ballot",[BigInt(id)],`${name}_ground`),"PAIRING",name);
+  b=await record(id);const ground=b.ground.digest;
+  for(let n=1;n<=(name==="ambiguous"?3:1);n++){
+   await submit(n%2,"resolve_pair",[BigInt(id),0n,1n],`${name}_pair_${n}`);
+   b=await record(id);expect(b.pairs["0:1"]?.relation,relation,name);expect(b.ground.digest,ground,"fixed source snapshot");
+  }
+  if(name==="ambiguous"){
+   expect(b.state,"UNRESOLVED",name);
+   await unchanged(id,1,"open_voting",[BigInt(id),commitment,"0".repeat(64)],`${name}_voting_blocked`,"GRAPH_INCOMPLETE");
+  }else{
+   expect(b.state,"GRAPH_READY",name);
+   await unchanged(id,0,"resolve_pair",[BigInt(id),0n,1n],`${name}_pair_replay`,"PAIR_ALREADY_RESOLVED");
+  }
+  report.cases[`${name}_result`]={passed:true,ballot:b};save();
+  expect(await submit(0,"cancel_ballot",[BigInt(id)],`${name}_cancel`),"CANCELLED",name);
+ }
+}else{
 const id=await create("happy_create");report.ballot_id=id;save();
 let ballot=await record(id);const commitment=ballot.commitment;
 await unchanged(id,0,"accept_ballot",[BigInt(id),"0".repeat(64)],"wrong_commitment","COMMITMENT_MISMATCH");
@@ -84,4 +111,5 @@ expect(await submit(1,"accept_ballot",[BigInt(badId),bad.commitment],"bad_consen
 await unchanged(badId,1,"ground_ballot",[BigInt(badId)],"source_failure","SOURCE_UNVERIFIED");
 await unchanged(badId,1,"cancel_ballot",[BigInt(badId)],"unauthorized_cancel","CREATOR_ONLY");
 expect(await submit(0,"cancel_ballot",[BigInt(badId)],"cancel_failure_ballot"),"CANCELLED","cancel_failure_ballot");
+}
 report.final_counts=await read("get_counts");report.conflict_observed=report.transactions.some(t=>t.rounds?.some(r=>r.round==="Leader Rotation"||r.validators?.some(v=>v.vote==="disagree")));report.completed_at=new Date().toISOString();save();console.log("Suite complete",JSON.stringify(report.final_counts));

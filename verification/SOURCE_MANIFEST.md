@@ -18,7 +18,7 @@ Failure leaves the complete ballot and counters unchanged. URLs and caller-provi
 
 ## Synthetic fixture
 
-File: `fixtures/agenda.md`. Local digest/inventory: [fixture-local.json](fixture-local.json). A public repository/commit is intentionally not invented; publish this file before running live transactions and record the final commit SHA.
+File: `fixtures/agenda.md`. Local digest/inventory: [fixture-local.json](fixture-local.json). Published at commit `69437673e180f414efe6565a14b266110427845c` in [Azariavibecode/SlateWeave](https://github.com/Azariavibecode/SlateWeave/blob/69437673e180f414efe6565a14b266110427845c/fixtures/agenda.md). SHA-256: `cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220`. Live grounding still needs the contract's independent Git object/raw-byte authentication; publication alone is not a successful grounding claim.
 
 | Section | Purpose | Prospective expectation |
 |---|---|---|

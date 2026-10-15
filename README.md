@@ -42,7 +42,7 @@ npm --prefix frontend run build
 npm --prefix frontend run dev
 ```
 
-Supply a new StudioNet deployment in `frontend/.env.production` or the UI's Deployment control. No address from another project is reused. Publish `fixtures/agenda.md` at a full commit before using the creation form or live SDK runner.
+The production frontend is configured for SlateWeave deployment `0xf04875D5FF900C87aFa08C84cb2D14c4daCb73Ff` on StudioNet. The Deployment control still permits independent deployments. The default creation form uses synthetic fixture commit `69437673e180f414efe6565a14b266110427845c`; authors and voters remain chosen by the user, not hardcoded test wallets.
 
 ## Public methods
 
@@ -65,4 +65,4 @@ See [architecture](docs/ARCHITECTURE.md), [threat model](docs/THREAT_MODEL.md), 
 
 ## Current verification status
 
-45 direct contract tests and 8 UI transport/action tests pass. Production frontend builds. Desktop and mobile initial-screen/form checks have been performed. These are local tests and UI smoke checks; no SlateWeave StudioNet deployment or wallet-signing E2E result is claimed yet.
+45 direct contract tests and 8 UI transport/action tests pass. Production frontend builds. Desktop and mobile initial-screen/form checks have been performed. The deployed source exactly matches the repository file. Live SDK E2E is recorded under `verification/live/0xf04875d5ff900c87afa08c84cb2d14c4dacb73ff/`; only finalized recorded transactions constitute live evidence, not the prospective test plan or local mock results.
