@@ -2,11 +2,21 @@
 
 This report is generated from the actual SDK checkpoint files. Prepared scenarios and local mocks are not counted as live passes.
 
+## Result summary
+
+Suites: **COMPLETE**. 47/47 recorded transactions finalized. 18 rejected-call checks include complete pre/post state equality.
+
+Happy-path recorded winning slate: indices `[1,2]`, score **140**, cost **40**. See the independent tally check below when available.
+
+Semantic and source-failure coverage is detailed below; this is not a claim that every local attack variant was also run live.
+
 ## Deployment and sources
 
 - Contract: [0xf04875d5ff900c87afa08c84cb2d14c4dacb73ff](https://explorer-studio.genlayer.com/address/0xf04875d5ff900c87afa08c84cb2d14c4dacb73ff)
 - Network: StudioNet, chain ID 61999.
 - Repository: [Azariavibecode/SlateWeave](https://github.com/Azariavibecode/SlateWeave).
+
+Independent read-only finality/identity/result audit: **PASS**, 47 transaction checks. [Raw audit](live/0xf04875d5ff900c87afa08c84cb2d14c4dacb73ff/finality-audit.json).
 
 ## studionet-suite
 
@@ -253,8 +263,8 @@ Observed validator disagreement/rotation flag: **none recorded**. Semantic MUTUA
 
 ## semantic-suite
 
-Status: **IN PROGRESS — NOT A COMPLETED SUITE**. Started 2026-10-15T04:42:36.552Z; completed not yet.
-0/1 recorded transactions finalized; 0 recorded assertions passed.
+Status: **COMPLETE**. Started 2026-10-15T04:42:36.552Z; completed 2026-10-15T04:58:48.291Z.
+16/16 recorded transactions finalized; 4 recorded assertions passed.
 
 - Auxiliary A: `0x67A1A08Fc4cf7D05c859d0d3D8398a3A30B1677e`
 - Auxiliary B: `0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5`
@@ -278,18 +288,37 @@ Status: **IN PROGRESS — NOT A COMPLETED SUITE**. Started 2026-10-15T04:42:36.5
 
 | Scenario | Actor | Transaction | Finality | Consensus | Leader execution | Exact return |
 |---|---|---|---|---|---|---|
-| ambiguous_create | A | [0xf4a1275359…](https://explorer-studio.genlayer.com/transactions/0xf4a127535955a10b9c0bbfc5825ecefb4bf09dd0ba1b2cea137424218d04aade) | not finalized | pending | pending | pending |
+| ambiguous_create | A | [0xf4a1275359…](https://explorer-studio.genlayer.com/transactions/0xf4a127535955a10b9c0bbfc5825ecefb4bf09dd0ba1b2cea137424218d04aade) | FINALIZED | MAJORITY_AGREE | SUCCESS | 2 |
+| ambiguous_consent_a | A | [0x5bb83a4aff…](https://explorer-studio.genlayer.com/transactions/0x5bb83a4aff4fcadedd83452d635b6a57f08480ba82acf46c1102989ee90a02fa) | FINALIZED | MAJORITY_AGREE | SUCCESS | CONSENT_RECORDED |
+| ambiguous_consent_b | B | [0xd51225f704…](https://explorer-studio.genlayer.com/transactions/0xd51225f70491a15844e6538df2c498464e8139f4b405813070c0982581fc3e9f) | FINALIZED | MAJORITY_AGREE | SUCCESS | READY_TO_GROUND |
+| ambiguous_ground | B | [0x929d798300…](https://explorer-studio.genlayer.com/transactions/0x929d798300ab7f7a663565f4c73908e7c024bc386ef679ba84a85a4fbdbecf8f) | FINALIZED | MAJORITY_AGREE | SUCCESS | PAIRING |
+| ambiguous_pair_1 | B | [0xfea748eab6…](https://explorer-studio.genlayer.com/transactions/0xfea748eab62360093372063c37a867e2f6e4f6db28f7808ea204246f31feded2) | FINALIZED | MAJORITY_AGREE | SUCCESS | INSUFFICIENT |
+| ambiguous_pair_2 | A | [0x16b70d7daf…](https://explorer-studio.genlayer.com/transactions/0x16b70d7daf94374b29a10220003a66f054f074b4509f5ffd6fa14b8064cb78e8) | FINALIZED | MAJORITY_AGREE | SUCCESS | INSUFFICIENT |
+| ambiguous_pair_3 | B | [0x9d99385dd3…](https://explorer-studio.genlayer.com/transactions/0x9d99385dd3470ef6b0049b2d5c51b3fc1a639da573cc3d1f598060e2fc14870b) | FINALIZED | MAJORITY_AGREE | SUCCESS | INSUFFICIENT |
+| ambiguous_voting_blocked | B | [0x3a21e88179…](https://explorer-studio.genlayer.com/transactions/0x3a21e881799b4beecb20013fb19798bdddbb36f944467e28befc5cf0c8c22c54) | FINALIZED | MAJORITY_AGREE | SUCCESS | GRAPH_INCOMPLETE |
+| ambiguous_cancel | A | [0x6c43b47c46…](https://explorer-studio.genlayer.com/transactions/0x6c43b47c46de2ef718c3bf079ec789475bb673f854ae50bdfef86cc619ca94fa) | FINALIZED | MAJORITY_AGREE | SUCCESS | CANCELLED |
+| injection_create | A | [0x74abfd1f4f…](https://explorer-studio.genlayer.com/transactions/0x74abfd1f4fe14a3b79db48e2cede405d64f85bd4aeb6bfba0e1983693bcb787b) | FINALIZED | MAJORITY_AGREE | SUCCESS | 3 |
+| injection_consent_a | A | [0x60463f8883…](https://explorer-studio.genlayer.com/transactions/0x60463f8883d889b7a2ae537e32ce4c9ca2a78356a2729e3f2b6462c2d24b289c) | FINALIZED | MAJORITY_AGREE | SUCCESS | CONSENT_RECORDED |
+| injection_consent_b | B | [0xef2b4d16de…](https://explorer-studio.genlayer.com/transactions/0xef2b4d16de1631c9f0f3b20e11bd1673d00006f7542a69d08531f4d57d3be3fd) | FINALIZED | MAJORITY_AGREE | SUCCESS | READY_TO_GROUND |
+| injection_ground | B | [0x75cdc31457…](https://explorer-studio.genlayer.com/transactions/0x75cdc314573b219d475a739366d30b1112df232cc197b38da59183db8d1134cb) | FINALIZED | MAJORITY_AGREE | SUCCESS | PAIRING |
+| injection_pair_1 | B | [0x82999f1765…](https://explorer-studio.genlayer.com/transactions/0x82999f17658f1880a62702f508523427993adf77753e2036ae99ec458c451705) | FINALIZED | MAJORITY_AGREE | SUCCESS | MUTUALLY_EXCLUSIVE |
+| injection_pair_replay | A | [0x5222e64c47…](https://explorer-studio.genlayer.com/transactions/0x5222e64c478c2736f7221de61dbce16856020e879f5eb40c4df46660bd87f503) | FINALIZED | MAJORITY_AGREE | SUCCESS | WRONG_PHASE |
+| injection_cancel | A | [0x8908bed685…](https://explorer-studio.genlayer.com/transactions/0x8908bed685eab3206352261774f0bd2af5064de1cff105a2cfb7c4110877c9f6) | FINALIZED | MAJORITY_AGREE | SUCCESS | CANCELLED |
 
-Recorded validator entries: 0 agree, 0 disagree, 0 idle; 0 execution errors. Majority agreement is not a claim that every validator succeeded.
+Recorded validator entries: 49 agree, 0 disagree, 14 idle; 14 execution errors. Majority agreement is not a claim that every validator succeeded.
 
 ### Assertions and full readbacks
 
 | Check | Recorded result |
 |---|---|
+| ambiguous_voting_blocked | PASS; expected GRAPH_INCOMPLETE |
+| ambiguous_result | PASS; expected see exact ballot snapshot |
+| injection_pair_replay | PASS; expected WRONG_PHASE |
+| injection_result | PASS; expected see exact ballot snapshot |
 
 Raw evidence: [semantic-suite.json](live/0xf04875d5ff900c87afa08c84cb2d14c4dacb73ff/semantic-suite.json). Rejected-call entries contain complete ballot plus aggregate counter snapshots before and after, and require exact equality. A contract rejection is a successful transaction returning a rejection enum, not a VM exception.
 
-Observed validator disagreement/rotation flag: **not assessed until suite completion**. Semantic MUTUALLY_EXCLUSIVE is a proposal conflict, not validator disagreement.
+Observed validator disagreement/rotation flag: **none recorded**. Semantic MUTUALLY_EXCLUSIVE is a proposal conflict, not validator disagreement.
 
 ## Independent tally check
 

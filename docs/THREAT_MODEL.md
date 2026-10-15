@@ -19,6 +19,6 @@
 | Three individually affordable options exceed aggregate budget | Cost sum checked for every candidate subset |
 | Replay finalization | Terminal phase prevents winner/counter mutation |
 
-Local direct tests mock website/model responses and the comparative judge. They prove code-path and invariant behavior under those mocks; they are not evidence of live validator consensus. The prepared SDK runner records actual network votes, execution, return values and complete before/after snapshots when deployed.
+Local direct tests mock website/model responses and the comparative judge. They prove code-path and invariant behavior under those mocks; they are not evidence of live validator consensus. The SDK runner separately records actual network votes, execution, return values and complete before/after snapshots in the live ledger. A single synthetic injection fixture is not a universal prompt-injection robustness benchmark, and proposal conflicts are not validator disagreement.
 
 No custody or clock primitive is used. Liveness depends on a fixed voter roster completing its vote/abstention. Pending voting cannot be cancelled by the creator. This is explicit; continuous monitoring, automatic expiry and eventual completion despite absent voters are not claimed.

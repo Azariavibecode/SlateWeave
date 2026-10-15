@@ -12,6 +12,8 @@ Observed checks:
 4. Returning to ID 0 initiates a fresh contract read rather than trusting the former selection.
 5. After the finalized SDK transaction, a fresh production-page load displays `FINALIZED`, selected options Incentive priority + Transparency report, total score 140, cost 40/100, totals `[60,70,70]`, and aggregate counters 1 agenda / 1 finalized / 0 cancelled. No vote, cancel or finalize action is offered for that terminal ballot.
 6. After rebuilding the strict-ID guard, clearing the ID input removes ballot state/counters and displays the integer-ID validation error. It does not alias the empty field to ballot 0. This is also a dedicated frontend protocol regression.
+7. Mobile viewport 390×844 loads the same finalized slate and 140-point / 40-cost result. Measured document width 375 is within the 390px viewport, with no horizontal overflow. Aggregate counters have legitimately advanced as later semantic test ballots are created; they are not expected to stay at the earlier screenshot's values.
+8. Ballot 2 after the three finalized insufficient judgments displays `UNRESOLVED`, the ambiguous source text, the pair's `INSUFFICIENT` relation, and an explicit statement that voting cannot open. No voting or retry action is displayed.
 
 Artifacts:
 
@@ -19,5 +21,7 @@ Artifacts:
 - [Unknown ID screen](live/0xf04875d5ff900c87afa08c84cb2d14c4dacb73ff/ui-readonly-missing-id.png)
 - [Finalized winner screen](live/0xf04875d5ff900c87afa08c84cb2d14c4dacb73ff/ui-readonly-finalized.png)
 - [Blank ID guard](live/0xf04875d5ff900c87afa08c84cb2d14c4dacb73ff/ui-readonly-blank-id.png)
+- [Mobile finalized readback](live/0xf04875d5ff900c87afa08c84cb2d14c4dacb73ff/ui-readonly-mobile-finalized.png)
+- [Unresolved ballot fail-closed UI](live/0xf04875d5ff900c87afa08c84cb2d14c4dacb73ff/ui-readonly-unresolved.png)
 
 The source-grounding transaction may already be reflected by a read before its FINALIZED checkpoint is saved by the SDK runner. These screenshots prove displayed readback, not transaction finality. The runner's receipt/consensus/leader record supplies the independent finality evidence.
