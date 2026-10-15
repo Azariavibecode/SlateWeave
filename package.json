@@ -1,0 +1,1 @@
+{"name":"slateweave","private":true,"type":"module","scripts":{"test":"python -m pytest -q -p no:cacheprovider","build":"npm --prefix frontend run build"},"dependencies":{"genlayer-js":"0.28.7","viem":"^2.38.0"}}

@@ -1,0 +1,10 @@
+{
+  "verified_at": "2026-10-15T03:49:41.302Z",
+  "file": "fixtures/agenda.md",
+  "sha256": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+  "git_blob_sha1": "fa3295b7bb6b44dcb4957c1a67292eda104d2558",
+  "bytes": 2124,
+  "synthetic": true,
+  "published_commit": null,
+  "authority_scope": "Exact proposed text only; no claim of real DAO approval or execution"
+}
