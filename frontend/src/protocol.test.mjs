@@ -1,6 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import{transactionReturn,validateReturn,nextAction,assertReadback}from"./protocol.mjs";
+import{transactionReturn,validateReturn,nextAction,assertReadback,isBallotId}from"./protocol.mjs";
+test("blank, noncanonical and unsafe IDs never alias ballot zero",()=>{for(const id of[""," ","00","01","-1","0x0","1.0","9007199254740992"])assert.equal(isBallotId(id),false,id);for(const id of["0","1","999999"])assert.equal(isBallotId(id),true,id)});
 const actor="0x"+"1".repeat(40);
 const base={ballot_id:7,state:"CONSENT",participants:[actor],consents:[],config:{voters:[actor]},votes:{}};
 function tx(value,overrides={}){return{result_name:"MAJORITY_AGREE",consensus_data:{leader_receipt:[{mode:"leader",execution_result:"SUCCESS",result:{status:"return",payload:{readable:JSON.stringify(value)}}}]},...overrides}}

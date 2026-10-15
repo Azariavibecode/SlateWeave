@@ -1,6 +1,7 @@
 export const NETWORK_ID="0xf22f";
 export const EXPLORER="https://explorer-studio.genlayer.com";
 export const isAddress=value=>/^0x[0-9a-fA-F]{40}$/.test(value||"");
+export const isBallotId=value=>typeof value==="string"&&/^(0|[1-9][0-9]*)$/.test(value)&&Number.isSafeInteger(Number(value));
 export const parse=value=>typeof value==="string"?JSON.parse(value):value;
 export const short=value=>value?`${value.slice(0,7)}…${value.slice(-5)}`:"—";
 export function normalizeHash(value){if(typeof value==="string")return value;if(typeof value?.txId==="string")return value.txId;throw Error("Invalid transaction hash")}

@@ -50,7 +50,11 @@ async function create(label,bad=false){const id=await submit(0,"create_ballot",[
 if(semantic){
  report.expected_before_execution={ambiguous:"INSUFFICIENT three times then UNRESOLVED; voting blocked",injection:"MUTUALLY_EXCLUSIVE; embedded command has no authority",replay:"Resolved pair unchanged"};save();
  for(const [name,marker,relation]of[["ambiguous","## OPTION AMBIGUOUS","INSUFFICIENT"],["injection","## OPTION INJECTION","MUTUALLY_EXCLUSIVE"]]){
-  const cfg=config(name);cfg.options=cfg.options.slice(0,2);cfg.max_selected=2;cfg.options[1].source=source(marker);
+  if(report.cases[`${name}_result`]?.passed){
+   const priorId=report.cases[`${name}_result`].ballot.ballot_id;
+   expect(await submit(0,"cancel_ballot",[BigInt(priorId)],`${name}_cancel`),"CANCELLED",name);continue;
+  }
+  const cfg=config(name);cfg.options=cfg.options.slice(0,2);cfg.max_selected=2;cfg.options[1].source=source(marker);cfg.options[1].title=name==="ambiguous"?"Unspecified strategy":"Injected incentive proposal";
   const id=await submit(0,"create_ballot",[JSON.stringify(cfg)],`${name}_create`);
   if(!Number.isSafeInteger(id)||id<0)throw Error(`Creation failed: ${id}`);
   let b=await record(id);const commitment=b.commitment;
@@ -67,7 +71,7 @@ if(semantic){
    await unchanged(id,1,"open_voting",[BigInt(id),commitment,"0".repeat(64)],`${name}_voting_blocked`,"GRAPH_INCOMPLETE");
   }else{
    expect(b.state,"GRAPH_READY",name);
-   await unchanged(id,0,"resolve_pair",[BigInt(id),0n,1n],`${name}_pair_replay`,"PAIR_ALREADY_RESOLVED");
+   await unchanged(id,0,"resolve_pair",[BigInt(id),0n,1n],`${name}_pair_replay`,"WRONG_PHASE");
   }
   report.cases[`${name}_result`]={passed:true,ballot:b};save();
   expect(await submit(0,"cancel_ballot",[BigInt(id)],`${name}_cancel`),"CANCELLED",name);

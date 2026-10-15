@@ -3,7 +3,7 @@ import{createRoot}from"react-dom/client";
 import{createClient}from"genlayer-js";
 import{studionet}from"genlayer-js/chains";
 import{ArrowRight,Check,CheckCheck,ChevronDown,Copy,ExternalLink,GitBranch,Info,Layers3,Link2,Loader2,Plus,RefreshCw,ShieldCheck,Vote,Wallet,X}from"lucide-react";
-import{EXPLORER,NETWORK_ID,isAddress,parse,short,normalizeHash,transactionReturn,validateReturn,nextAction,assertReadback}from"./protocol.mjs";
+import{EXPLORER,NETWORK_ID,isAddress,isBallotId,parse,short,normalizeHash,transactionReturn,validateReturn,nextAction,assertReadback}from"./protocol.mjs";
 import"./styles.css";
 
 const reader=createClient({chain:studionet});
@@ -20,7 +20,7 @@ function App(){
  const[label,setLabel]=useState("Cedar DAO · Q4 agenda");const[budget,setBudget]=useState(100);const[maxSelected,setMaxSelected]=useState(3);const[voters,setVoters]=useState("");const[options,setOptions]=useState(template);const[source,setSource]=useState({owner:"Azariavibecode",repo:"SlateWeave",commit:"69437673e180f414efe6565a14b266110427845c",path:"/fixtures/agenda.md",digest:"cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",marker:"## POLICY Q4"});
  const selected=useRef({contract,id});selected.current={contract,id};
  const epoch=useRef(0);const inFlight=useRef(false);
- const valid=isAddress(contract);const loaded=ballot?.ballot_id===Number(id);const action=loaded?nextAction(ballot,account):"none";
+ const valid=isAddress(contract);const loaded=isBallotId(id)&&ballot?.ballot_id===Number(id);const action=loaded?nextAction(ballot,account):"none";
  const pairs=loaded?ballot.config.options.flatMap((_,i)=>ballot.config.options.slice(i+1).map((__,n)=>[i,i+1+n])):[];
  const canWrite=valid&&account&&chain?.toLowerCase()===NETWORK_ID&&!busy&&loaded;
  const pending=pairs.filter(([i,j])=>!ballot.pairs[`${i}:${j}`]||ballot.pairs[`${i}:${j}`].relation==="INSUFFICIENT");
@@ -30,7 +30,8 @@ function App(){
   if(!isAddress(address))return null;
   const ticket=++epoch.current;
   try{
-   const [raw,total]=await Promise.all([reader.readContract({address,functionName:"get_ballot",args:[BigInt(target||0)]}),reader.readContract({address,functionName:"get_counts",args:[]})]);
+   if(!isBallotId(String(target)))throw Error("Enter a non-negative integer ballot ID within the supported range.");
+   const [raw,total]=await Promise.all([reader.readContract({address,functionName:"get_ballot",args:[BigInt(target)]}),reader.readContract({address,functionName:"get_counts",args:[]})]);
    const value=parse(raw),ct=parse(total);
    if(ticket!==epoch.current||selected.current.contract!==address||selected.current.id!==String(target)){
     if(required)throw Error("Selection changed during readback; refresh the intended ballot.");return null;
@@ -65,7 +66,7 @@ function App(){
    setNotice(method==="resolve_pair"&&value==="INSUFFICIENT"?"Finalized: evidence was insufficient. Voting stays closed; at most three attempts per pair.":`Finalized · ${String(value).replaceAll("_"," ").toLowerCase()}. State verified on-chain.`);
   }catch(e){setNotice(`Action not confirmed: ${e.message}`)}finally{inFlight.current=false;setBusy("")}
  }
- useEffect(()=>{if(inFlight.current)return;epoch.current++;setBallot(null);setFocused(null);setScores([]);if(valid){localStorage.setItem("slateweave-contract",contract);load(id,contract)}},[contract,id]);
+ useEffect(()=>{if(inFlight.current)return;epoch.current++;setBallot(null);setCounts(null);setFocused(null);setScores([]);setHash("");setNotice(valid?"Loading the selected agenda from StudioNet…":"Configure a StudioNet deployment to load an agenda.");if(valid){localStorage.setItem("slateweave-contract",contract);load(id,contract)}},[contract,id]);
  useEffect(()=>{const p=window.ethereum;if(!p)return;const changeAccounts=a=>{setAccount(a?.[0]||"");setNotice("Wallet selection updated.")};const changeChain=c=>{setChain(c||"")};Promise.all([p.request({method:"eth_accounts"}),p.request({method:"eth_chainId"})]).then(([a,c])=>{setAccount(a?.[0]||"");setChain(c||"")}).catch(()=>{});p.on?.("accountsChanged",changeAccounts);p.on?.("chainChanged",changeChain);return()=>{p.removeListener?.("accountsChanged",changeAccounts);p.removeListener?.("chainChanged",changeChain)}},[]);
  const create=()=>{
   try{
@@ -106,7 +107,7 @@ function App(){
     {action==="open_voting"&&<button className="primary" disabled={!canWrite} onClick={()=>write("open_voting",[BigInt(id),ballot.commitment,ballot.graph_digest])}>Open the voting round <Vote size={16}/></button>}
     {action==="cast_vote"&&<button className="primary" disabled={!canWrite||totalPoints>100||scores.some(n=>!Number.isInteger(n)||n<0)} onClick={()=>write("cast_vote",[BigInt(id),ballot.commitment,ballot.graph_digest,JSON.stringify(ballot.config.options.map((_,i)=>scores[i]||0))])}>Submit {totalPoints===0?"abstention":"your vote"} <ArrowRight size={16}/></button>}
     {action==="finalize"&&<button className="primary" disabled={!canWrite} onClick={()=>write("finalize",[BigInt(id),ballot.graph_digest])}>Finalize the winning slate <Check size={16}/></button>}
-    {action==="waiting_consent"&&<p className="waiting">Waiting for the remaining named participants.</p>}{action==="waiting_votes"&&<p className="waiting">Your vote is recorded, or this wallet is not on the voter list.</p>}
+    {action==="waiting_consent"&&<p className="waiting">Waiting for the remaining named participants.</p>}{action==="waiting_votes"&&<p className="waiting">{!account?"Connect a registered voter wallet to cast a vote. You can also create an independent agenda with your own wallet.":!ballot.config.voters.includes(account.toLowerCase())?"This wallet is not on this ballot's voter list. Create your own agenda to test the full flow.":"Your vote is already recorded. Waiting for the remaining voters."}</p>}
     {busy&&<p className="working"><Loader2 className="spin" size={15}/> {busy.replaceAll("_"," ")}…</p>}
    </article></div>
    {account.toLowerCase()===ballot.creator&&["CONSENT","READY_TO_GROUND","PAIRING","GRAPH_READY","UNRESOLVED"].includes(ballot.state)&&<div className="cancelRow"><span>No funds are held. Cancellation creates no winning slate.</span><button disabled={!canWrite} onClick={()=>write("cancel_ballot",[BigInt(id)])}>Cancel this ballot</button></div>}

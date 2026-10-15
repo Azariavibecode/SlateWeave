@@ -545,6 +545,804 @@
           ]
         }
       ]
+    },
+    {
+      "label": "wrong_graph_digest",
+      "hash": "0xe83c7f7bbb96e72a52a613b22cd5c4e044420132fe073c8c5aeafc2629a1e7b3",
+      "actor": "0x67A1A08Fc4cf7D05c859d0d3D8398a3A30B1677e",
+      "method": "open_voting",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0xe83c7f7bbb96e72a52a613b22cd5c4e044420132fe073c8c5aeafc2629a1e7b3",
+      "finalized": true,
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "returned": "COMMITMENT_MISMATCH",
+      "rounds": [
+        {
+          "round": "Accepted",
+          "status_changes": [
+            "PENDING",
+            "PROPOSING",
+            "COMMITTING",
+            "REVEALING",
+            "ACCEPTED"
+          ],
+          "validators": [
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "idle",
+              "execution": "ERROR"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "idle",
+              "execution": "ERROR"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "open_voting",
+      "hash": "0x7b6cba740d43aa360bf35a64d324e32fdad6a68c1edb99ee59abd6c67c9fd871",
+      "actor": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5",
+      "method": "open_voting",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0x7b6cba740d43aa360bf35a64d324e32fdad6a68c1edb99ee59abd6c67c9fd871",
+      "finalized": true,
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "returned": "VOTING",
+      "rounds": [
+        {
+          "round": "Accepted",
+          "status_changes": [
+            "PENDING",
+            "PROPOSING",
+            "COMMITTING",
+            "REVEALING",
+            "ACCEPTED"
+          ],
+          "validators": [
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "cancel_during_voting",
+      "hash": "0xcc11778f763e572e199ee1ff9a394353191395b72bd13c40664431942b524e02",
+      "actor": "0x67A1A08Fc4cf7D05c859d0d3D8398a3A30B1677e",
+      "method": "cancel_ballot",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0xcc11778f763e572e199ee1ff9a394353191395b72bd13c40664431942b524e02",
+      "finalized": true,
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "returned": "CANNOT_CANCEL",
+      "rounds": [
+        {
+          "round": "Accepted",
+          "status_changes": [
+            "PENDING",
+            "PROPOSING",
+            "COMMITTING",
+            "REVEALING",
+            "ACCEPTED"
+          ],
+          "validators": [
+            {
+              "vote": "idle",
+              "execution": "ERROR"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "idle",
+              "execution": "ERROR"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "overspend_vote",
+      "hash": "0xd4a6745bd54ce511a2da6acd48239c927cd0ad7894818a72af09dd8e80545540",
+      "actor": "0x67A1A08Fc4cf7D05c859d0d3D8398a3A30B1677e",
+      "method": "cast_vote",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0xd4a6745bd54ce511a2da6acd48239c927cd0ad7894818a72af09dd8e80545540",
+      "finalized": true,
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "returned": "INVALID_SCORES",
+      "rounds": [
+        {
+          "round": "Accepted",
+          "status_changes": [
+            "PENDING",
+            "PROPOSING",
+            "COMMITTING",
+            "REVEALING",
+            "ACCEPTED"
+          ],
+          "validators": [
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "wrong_vote_graph",
+      "hash": "0x444ae369dab66dc2de58028dd8008b9b8b1cfc0b52067b30586b75bacfb490c5",
+      "actor": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5",
+      "method": "cast_vote",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0x444ae369dab66dc2de58028dd8008b9b8b1cfc0b52067b30586b75bacfb490c5",
+      "finalized": true,
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "returned": "COMMITMENT_MISMATCH",
+      "rounds": [
+        {
+          "round": "Accepted",
+          "status_changes": [
+            "PENDING",
+            "PROPOSING",
+            "COMMITTING",
+            "REVEALING",
+            "ACCEPTED"
+          ],
+          "validators": [
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "vote_a",
+      "hash": "0xf02406854f6e0515903fd52ae2e02cf6a2ffb53d0c5adab89c2585933b4b4fea",
+      "actor": "0x67A1A08Fc4cf7D05c859d0d3D8398a3A30B1677e",
+      "method": "cast_vote",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0xf02406854f6e0515903fd52ae2e02cf6a2ffb53d0c5adab89c2585933b4b4fea",
+      "finalized": true,
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "returned": "VOTE_RECORDED",
+      "rounds": [
+        {
+          "round": "Accepted",
+          "status_changes": [
+            "PENDING",
+            "PROPOSING",
+            "COMMITTING",
+            "REVEALING",
+            "ACCEPTED"
+          ],
+          "validators": [
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "duplicate_vote",
+      "hash": "0x0b013cd4bd9755e57b9566b998aa199ac0da65eeee895cd01fb9eb7c1fae90e2",
+      "actor": "0x67A1A08Fc4cf7D05c859d0d3D8398a3A30B1677e",
+      "method": "cast_vote",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0x0b013cd4bd9755e57b9566b998aa199ac0da65eeee895cd01fb9eb7c1fae90e2",
+      "finalized": true,
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "returned": "ALREADY_VOTED",
+      "rounds": [
+        {
+          "round": "Accepted",
+          "status_changes": [
+            "PENDING",
+            "PROPOSING",
+            "COMMITTING",
+            "REVEALING",
+            "ACCEPTED"
+          ],
+          "validators": [
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "idle",
+              "execution": "ERROR"
+            },
+            {
+              "vote": "idle",
+              "execution": "ERROR"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "finalize_before_all_votes",
+      "hash": "0xd3893d595bb894c91c2e8bac517e04845d5a382ad39a15e2ff0d2a87f22d108f",
+      "actor": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5",
+      "method": "finalize",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0xd3893d595bb894c91c2e8bac517e04845d5a382ad39a15e2ff0d2a87f22d108f",
+      "finalized": true,
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "returned": "VOTES_INCOMPLETE",
+      "rounds": [
+        {
+          "round": "Accepted",
+          "status_changes": [
+            "PENDING",
+            "PROPOSING",
+            "COMMITTING",
+            "REVEALING",
+            "ACCEPTED"
+          ],
+          "validators": [
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "idle",
+              "execution": "ERROR"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "vote_b",
+      "hash": "0xe3b7b6a83caf9ab427f49ec4f23c81c654d57ba9904a28d47241a1a3ca34ee19",
+      "actor": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5",
+      "method": "cast_vote",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0xe3b7b6a83caf9ab427f49ec4f23c81c654d57ba9904a28d47241a1a3ca34ee19",
+      "finalized": true,
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "returned": "TALLY_READY",
+      "rounds": [
+        {
+          "round": "Accepted",
+          "status_changes": [
+            "PENDING",
+            "PROPOSING",
+            "COMMITTING",
+            "REVEALING",
+            "ACCEPTED"
+          ],
+          "validators": [
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "wrong_finalize_graph",
+      "hash": "0xf489cf4ea46def4833924ac51448c82f7b07ae0046d42a13de4b5597042634ef",
+      "actor": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5",
+      "method": "finalize",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0xf489cf4ea46def4833924ac51448c82f7b07ae0046d42a13de4b5597042634ef",
+      "finalized": true,
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "returned": "COMMITMENT_MISMATCH",
+      "rounds": [
+        {
+          "round": "Accepted",
+          "status_changes": [
+            "PENDING",
+            "PROPOSING",
+            "COMMITTING",
+            "REVEALING",
+            "ACCEPTED"
+          ],
+          "validators": [
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "idle",
+              "execution": "ERROR"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "finalize",
+      "hash": "0xa5a28fd33ff4f29174bdbbcedaa2f6c429a249eb409840cb7ed6a504f9ae30a4",
+      "actor": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5",
+      "method": "finalize",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0xa5a28fd33ff4f29174bdbbcedaa2f6c429a249eb409840cb7ed6a504f9ae30a4",
+      "finalized": true,
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "returned": "FINALIZED",
+      "rounds": [
+        {
+          "round": "Accepted",
+          "status_changes": [
+            "PENDING",
+            "PROPOSING",
+            "COMMITTING",
+            "REVEALING",
+            "ACCEPTED"
+          ],
+          "validators": [
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "finalize_replay",
+      "hash": "0x1f6b7f4396579bbe625725f79386503c461dec86363496dadcd4e8aad8329f94",
+      "actor": "0x67A1A08Fc4cf7D05c859d0d3D8398a3A30B1677e",
+      "method": "finalize",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0x1f6b7f4396579bbe625725f79386503c461dec86363496dadcd4e8aad8329f94",
+      "finalized": true,
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "returned": "VOTES_INCOMPLETE",
+      "rounds": [
+        {
+          "round": "Accepted",
+          "status_changes": [
+            "PENDING",
+            "PROPOSING",
+            "COMMITTING",
+            "REVEALING",
+            "ACCEPTED"
+          ],
+          "validators": [
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "vote_after_finality",
+      "hash": "0x41defc5e84134226eeb3a170a7e277fecdb1acdee038acde2967d152be12d7d2",
+      "actor": "0x67A1A08Fc4cf7D05c859d0d3D8398a3A30B1677e",
+      "method": "cast_vote",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0x41defc5e84134226eeb3a170a7e277fecdb1acdee038acde2967d152be12d7d2",
+      "finalized": true,
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "returned": "WRONG_PHASE",
+      "rounds": [
+        {
+          "round": "Accepted",
+          "status_changes": [
+            "PENDING",
+            "PROPOSING",
+            "COMMITTING",
+            "REVEALING",
+            "ACCEPTED"
+          ],
+          "validators": [
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "idle",
+              "execution": "ERROR"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "source_failure_create",
+      "hash": "0xc28ade54998b6e8f9ccd1b56c0416e9b7302935620e84feabf3087a9a935e8bd",
+      "actor": "0x67A1A08Fc4cf7D05c859d0d3D8398a3A30B1677e",
+      "method": "create_ballot",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0xc28ade54998b6e8f9ccd1b56c0416e9b7302935620e84feabf3087a9a935e8bd",
+      "finalized": true,
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "returned": 1,
+      "rounds": [
+        {
+          "round": "Accepted",
+          "status_changes": [
+            "PENDING",
+            "PROPOSING",
+            "COMMITTING",
+            "REVEALING",
+            "ACCEPTED"
+          ],
+          "validators": [
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "idle",
+              "execution": "ERROR"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "bad_consent_a",
+      "hash": "0xafa2051c927de94bb412c340aa0875afd5128bd6dd633e16e76955293cfc5283",
+      "actor": "0x67A1A08Fc4cf7D05c859d0d3D8398a3A30B1677e",
+      "method": "accept_ballot",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0xafa2051c927de94bb412c340aa0875afd5128bd6dd633e16e76955293cfc5283",
+      "finalized": true,
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "returned": "CONSENT_RECORDED",
+      "rounds": [
+        {
+          "round": "Accepted",
+          "status_changes": [
+            "PENDING",
+            "PROPOSING",
+            "COMMITTING",
+            "REVEALING",
+            "ACCEPTED"
+          ],
+          "validators": [
+            {
+              "vote": "idle",
+              "execution": "ERROR"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "idle",
+              "execution": "ERROR"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "bad_consent_b",
+      "hash": "0x3859714127b65bcb3f49987611e6e8ea62ec87108ff53dcafa3ac46fae30efb6",
+      "actor": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5",
+      "method": "accept_ballot",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0x3859714127b65bcb3f49987611e6e8ea62ec87108ff53dcafa3ac46fae30efb6",
+      "finalized": true,
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "returned": "READY_TO_GROUND",
+      "rounds": [
+        {
+          "round": "Accepted",
+          "status_changes": [
+            "PENDING",
+            "PROPOSING",
+            "COMMITTING",
+            "REVEALING",
+            "ACCEPTED"
+          ],
+          "validators": [
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "source_failure",
+      "hash": "0xddbc40dc62eb02517ea0295565d562d40182a478a18b3946d642d93b2f81096b",
+      "actor": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5",
+      "method": "ground_ballot",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0xddbc40dc62eb02517ea0295565d562d40182a478a18b3946d642d93b2f81096b",
+      "finalized": true,
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "returned": "SOURCE_UNVERIFIED",
+      "rounds": [
+        {
+          "round": "Accepted",
+          "status_changes": [
+            "PENDING",
+            "PROPOSING",
+            "COMMITTING",
+            "REVEALING",
+            "ACCEPTED"
+          ],
+          "validators": [
+            {
+              "vote": "idle",
+              "execution": "ERROR"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "idle",
+              "execution": "ERROR"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "unauthorized_cancel",
+      "hash": "0xa79e681f122ff612087e1aae9a588c6308cee4419a3893e242f8314b29760140",
+      "actor": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5",
+      "method": "cancel_ballot",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0xa79e681f122ff612087e1aae9a588c6308cee4419a3893e242f8314b29760140",
+      "finalized": true,
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "returned": "CREATOR_ONLY",
+      "rounds": [
+        {
+          "round": "Accepted",
+          "status_changes": [
+            "PENDING",
+            "PROPOSING",
+            "COMMITTING",
+            "REVEALING",
+            "ACCEPTED"
+          ],
+          "validators": [
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "cancel_failure_ballot",
+      "hash": "0x941dd89230ce3382a7a38477b3ecce05a340c94cedecf0c6ce886eae3df74fe7",
+      "actor": "0x67A1A08Fc4cf7D05c859d0d3D8398a3A30B1677e",
+      "method": "cancel_ballot",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0x941dd89230ce3382a7a38477b3ecce05a340c94cedecf0c6ce886eae3df74fe7",
+      "finalized": true,
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "returned": "CANCELLED",
+      "rounds": [
+        {
+          "round": "Accepted",
+          "status_changes": [
+            "PENDING",
+            "PROPOSING",
+            "COMMITTING",
+            "REVEALING",
+            "ACCEPTED"
+          ],
+          "validators": [
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            },
+            {
+              "vote": "agree",
+              "execution": "SUCCESS"
+            }
+          ]
+        }
+      ]
     }
   ],
   "cases": {
@@ -1436,6 +2234,2527 @@
       "expected": "INVALID_PAIR",
       "returned": "INVALID_PAIR",
       "passed": true
+    },
+    "wrong_graph_digest": {
+      "before": {
+        "ballot": {
+          "ballot_id": 0,
+          "commitment": "29cb4ef21940de8c22795f03f81247ae8e7a2f38b462237f7dcaa7e8f9f75d59",
+          "config": {
+            "budget": 100,
+            "label": "happy_create",
+            "max_selected": 3,
+            "options": [
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 60,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION AUDIT",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Audit priority"
+              },
+              {
+                "author": "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5",
+                "cost": 40,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION INCENTIVES",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Incentive priority"
+              },
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 0,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION REPORTING",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Transparency report"
+              }
+            ],
+            "policy": {
+              "commit": "69437673e180f414efe6565a14b266110427845c",
+              "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+              "marker": "## POLICY Q4",
+              "owner": "Azariavibecode",
+              "path": "/fixtures/agenda.md",
+              "repo": "SlateWeave"
+            },
+            "voters": [
+              "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+              "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+            ]
+          },
+          "consents": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "creator": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+          "graph_digest": "d95599f17ee3609ef9ca2589f284527fd95399d35d20367cf0fe0697adcdb98d",
+          "ground": {
+            "commitment": "29cb4ef21940de8c22795f03f81247ae8e7a2f38b462237f7dcaa7e8f9f75d59",
+            "digest": "b80d0b51a921840186b433075c4d1d454cdd0773193bfb57d11df99aedc3af0c",
+            "options": [
+              "## OPTION AUDIT\n\nAdopt security assurance as Cedar DAO's exclusive Q4 operating priority. During Q4, do not run a liquidity incentive program. Authorize preparing an independent audit engagement. This is a proposed mandate, not evidence that an audit has been purchased or completed.",
+              "## OPTION INCENTIVES\n\nAdopt liquidity incentives as Cedar DAO's exclusive Q4 operating priority. During Q4, do not commission an independent audit engagement. Authorize preparing a liquidity incentive program. This is a proposed mandate, not evidence of any actual token distribution.",
+              "## OPTION REPORTING\n\nPublish a Q4 treasury transparency report. Reporting does not select the operating priority and can accompany either security assurance or liquidity incentives. No external payment or completed publication is asserted."
+            ],
+            "policy": "## POLICY Q4\n\nThis ballot selects the Q4 strategy of the synthetic Cedar DAO. Its strategy can prioritize either security assurance or liquidity incentives exclusively for the quarter, but it cannot adopt both exclusive priorities at once. Treasury transparency reporting may accompany either strategy. Determine pairwise substantive conflicts from the full option texts. Numeric budget and cost constraints are enforced separately by the contract.",
+            "status": "GROUNDED"
+          },
+          "pairs": {
+            "0:1": {
+              "attempts": 1,
+              "binding": "737c0fafaf180d32ea71ae916ce90dd1b41c542685756e365425177de5d3088b",
+              "relation": "MUTUALLY_EXCLUSIVE"
+            },
+            "0:2": {
+              "attempts": 1,
+              "binding": "e6fb85f7413f2b7de06f93d5244cb08295e31b97ef13e284d0986696e623a295",
+              "relation": "COMPATIBLE"
+            },
+            "1:2": {
+              "attempts": 1,
+              "binding": "8db2db2f1446a919628e54bed3f089c61b661ff8182545503d169c7e21302c92",
+              "relation": "COMPATIBLE"
+            }
+          },
+          "participants": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "result": null,
+          "state": "GRAPH_READY",
+          "votes": {}
+        },
+        "counts": {
+          "ballot_count": 1,
+          "cancelled_count": 0,
+          "finalized_count": 0
+        }
+      },
+      "after": {
+        "ballot": {
+          "ballot_id": 0,
+          "commitment": "29cb4ef21940de8c22795f03f81247ae8e7a2f38b462237f7dcaa7e8f9f75d59",
+          "config": {
+            "budget": 100,
+            "label": "happy_create",
+            "max_selected": 3,
+            "options": [
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 60,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION AUDIT",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Audit priority"
+              },
+              {
+                "author": "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5",
+                "cost": 40,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION INCENTIVES",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Incentive priority"
+              },
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 0,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION REPORTING",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Transparency report"
+              }
+            ],
+            "policy": {
+              "commit": "69437673e180f414efe6565a14b266110427845c",
+              "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+              "marker": "## POLICY Q4",
+              "owner": "Azariavibecode",
+              "path": "/fixtures/agenda.md",
+              "repo": "SlateWeave"
+            },
+            "voters": [
+              "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+              "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+            ]
+          },
+          "consents": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "creator": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+          "graph_digest": "d95599f17ee3609ef9ca2589f284527fd95399d35d20367cf0fe0697adcdb98d",
+          "ground": {
+            "commitment": "29cb4ef21940de8c22795f03f81247ae8e7a2f38b462237f7dcaa7e8f9f75d59",
+            "digest": "b80d0b51a921840186b433075c4d1d454cdd0773193bfb57d11df99aedc3af0c",
+            "options": [
+              "## OPTION AUDIT\n\nAdopt security assurance as Cedar DAO's exclusive Q4 operating priority. During Q4, do not run a liquidity incentive program. Authorize preparing an independent audit engagement. This is a proposed mandate, not evidence that an audit has been purchased or completed.",
+              "## OPTION INCENTIVES\n\nAdopt liquidity incentives as Cedar DAO's exclusive Q4 operating priority. During Q4, do not commission an independent audit engagement. Authorize preparing a liquidity incentive program. This is a proposed mandate, not evidence of any actual token distribution.",
+              "## OPTION REPORTING\n\nPublish a Q4 treasury transparency report. Reporting does not select the operating priority and can accompany either security assurance or liquidity incentives. No external payment or completed publication is asserted."
+            ],
+            "policy": "## POLICY Q4\n\nThis ballot selects the Q4 strategy of the synthetic Cedar DAO. Its strategy can prioritize either security assurance or liquidity incentives exclusively for the quarter, but it cannot adopt both exclusive priorities at once. Treasury transparency reporting may accompany either strategy. Determine pairwise substantive conflicts from the full option texts. Numeric budget and cost constraints are enforced separately by the contract.",
+            "status": "GROUNDED"
+          },
+          "pairs": {
+            "0:1": {
+              "attempts": 1,
+              "binding": "737c0fafaf180d32ea71ae916ce90dd1b41c542685756e365425177de5d3088b",
+              "relation": "MUTUALLY_EXCLUSIVE"
+            },
+            "0:2": {
+              "attempts": 1,
+              "binding": "e6fb85f7413f2b7de06f93d5244cb08295e31b97ef13e284d0986696e623a295",
+              "relation": "COMPATIBLE"
+            },
+            "1:2": {
+              "attempts": 1,
+              "binding": "8db2db2f1446a919628e54bed3f089c61b661ff8182545503d169c7e21302c92",
+              "relation": "COMPATIBLE"
+            }
+          },
+          "participants": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "result": null,
+          "state": "GRAPH_READY",
+          "votes": {}
+        },
+        "counts": {
+          "ballot_count": 1,
+          "cancelled_count": 0,
+          "finalized_count": 0
+        }
+      },
+      "expected": "COMMITMENT_MISMATCH",
+      "returned": "COMMITMENT_MISMATCH",
+      "passed": true
+    },
+    "cancel_during_voting": {
+      "before": {
+        "ballot": {
+          "ballot_id": 0,
+          "commitment": "29cb4ef21940de8c22795f03f81247ae8e7a2f38b462237f7dcaa7e8f9f75d59",
+          "config": {
+            "budget": 100,
+            "label": "happy_create",
+            "max_selected": 3,
+            "options": [
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 60,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION AUDIT",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Audit priority"
+              },
+              {
+                "author": "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5",
+                "cost": 40,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION INCENTIVES",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Incentive priority"
+              },
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 0,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION REPORTING",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Transparency report"
+              }
+            ],
+            "policy": {
+              "commit": "69437673e180f414efe6565a14b266110427845c",
+              "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+              "marker": "## POLICY Q4",
+              "owner": "Azariavibecode",
+              "path": "/fixtures/agenda.md",
+              "repo": "SlateWeave"
+            },
+            "voters": [
+              "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+              "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+            ]
+          },
+          "consents": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "creator": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+          "graph_digest": "d95599f17ee3609ef9ca2589f284527fd95399d35d20367cf0fe0697adcdb98d",
+          "ground": {
+            "commitment": "29cb4ef21940de8c22795f03f81247ae8e7a2f38b462237f7dcaa7e8f9f75d59",
+            "digest": "b80d0b51a921840186b433075c4d1d454cdd0773193bfb57d11df99aedc3af0c",
+            "options": [
+              "## OPTION AUDIT\n\nAdopt security assurance as Cedar DAO's exclusive Q4 operating priority. During Q4, do not run a liquidity incentive program. Authorize preparing an independent audit engagement. This is a proposed mandate, not evidence that an audit has been purchased or completed.",
+              "## OPTION INCENTIVES\n\nAdopt liquidity incentives as Cedar DAO's exclusive Q4 operating priority. During Q4, do not commission an independent audit engagement. Authorize preparing a liquidity incentive program. This is a proposed mandate, not evidence of any actual token distribution.",
+              "## OPTION REPORTING\n\nPublish a Q4 treasury transparency report. Reporting does not select the operating priority and can accompany either security assurance or liquidity incentives. No external payment or completed publication is asserted."
+            ],
+            "policy": "## POLICY Q4\n\nThis ballot selects the Q4 strategy of the synthetic Cedar DAO. Its strategy can prioritize either security assurance or liquidity incentives exclusively for the quarter, but it cannot adopt both exclusive priorities at once. Treasury transparency reporting may accompany either strategy. Determine pairwise substantive conflicts from the full option texts. Numeric budget and cost constraints are enforced separately by the contract.",
+            "status": "GROUNDED"
+          },
+          "pairs": {
+            "0:1": {
+              "attempts": 1,
+              "binding": "737c0fafaf180d32ea71ae916ce90dd1b41c542685756e365425177de5d3088b",
+              "relation": "MUTUALLY_EXCLUSIVE"
+            },
+            "0:2": {
+              "attempts": 1,
+              "binding": "e6fb85f7413f2b7de06f93d5244cb08295e31b97ef13e284d0986696e623a295",
+              "relation": "COMPATIBLE"
+            },
+            "1:2": {
+              "attempts": 1,
+              "binding": "8db2db2f1446a919628e54bed3f089c61b661ff8182545503d169c7e21302c92",
+              "relation": "COMPATIBLE"
+            }
+          },
+          "participants": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "result": null,
+          "state": "VOTING",
+          "votes": {}
+        },
+        "counts": {
+          "ballot_count": 1,
+          "cancelled_count": 0,
+          "finalized_count": 0
+        }
+      },
+      "after": {
+        "ballot": {
+          "ballot_id": 0,
+          "commitment": "29cb4ef21940de8c22795f03f81247ae8e7a2f38b462237f7dcaa7e8f9f75d59",
+          "config": {
+            "budget": 100,
+            "label": "happy_create",
+            "max_selected": 3,
+            "options": [
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 60,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION AUDIT",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Audit priority"
+              },
+              {
+                "author": "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5",
+                "cost": 40,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION INCENTIVES",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Incentive priority"
+              },
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 0,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION REPORTING",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Transparency report"
+              }
+            ],
+            "policy": {
+              "commit": "69437673e180f414efe6565a14b266110427845c",
+              "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+              "marker": "## POLICY Q4",
+              "owner": "Azariavibecode",
+              "path": "/fixtures/agenda.md",
+              "repo": "SlateWeave"
+            },
+            "voters": [
+              "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+              "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+            ]
+          },
+          "consents": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "creator": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+          "graph_digest": "d95599f17ee3609ef9ca2589f284527fd95399d35d20367cf0fe0697adcdb98d",
+          "ground": {
+            "commitment": "29cb4ef21940de8c22795f03f81247ae8e7a2f38b462237f7dcaa7e8f9f75d59",
+            "digest": "b80d0b51a921840186b433075c4d1d454cdd0773193bfb57d11df99aedc3af0c",
+            "options": [
+              "## OPTION AUDIT\n\nAdopt security assurance as Cedar DAO's exclusive Q4 operating priority. During Q4, do not run a liquidity incentive program. Authorize preparing an independent audit engagement. This is a proposed mandate, not evidence that an audit has been purchased or completed.",
+              "## OPTION INCENTIVES\n\nAdopt liquidity incentives as Cedar DAO's exclusive Q4 operating priority. During Q4, do not commission an independent audit engagement. Authorize preparing a liquidity incentive program. This is a proposed mandate, not evidence of any actual token distribution.",
+              "## OPTION REPORTING\n\nPublish a Q4 treasury transparency report. Reporting does not select the operating priority and can accompany either security assurance or liquidity incentives. No external payment or completed publication is asserted."
+            ],
+            "policy": "## POLICY Q4\n\nThis ballot selects the Q4 strategy of the synthetic Cedar DAO. Its strategy can prioritize either security assurance or liquidity incentives exclusively for the quarter, but it cannot adopt both exclusive priorities at once. Treasury transparency reporting may accompany either strategy. Determine pairwise substantive conflicts from the full option texts. Numeric budget and cost constraints are enforced separately by the contract.",
+            "status": "GROUNDED"
+          },
+          "pairs": {
+            "0:1": {
+              "attempts": 1,
+              "binding": "737c0fafaf180d32ea71ae916ce90dd1b41c542685756e365425177de5d3088b",
+              "relation": "MUTUALLY_EXCLUSIVE"
+            },
+            "0:2": {
+              "attempts": 1,
+              "binding": "e6fb85f7413f2b7de06f93d5244cb08295e31b97ef13e284d0986696e623a295",
+              "relation": "COMPATIBLE"
+            },
+            "1:2": {
+              "attempts": 1,
+              "binding": "8db2db2f1446a919628e54bed3f089c61b661ff8182545503d169c7e21302c92",
+              "relation": "COMPATIBLE"
+            }
+          },
+          "participants": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "result": null,
+          "state": "VOTING",
+          "votes": {}
+        },
+        "counts": {
+          "ballot_count": 1,
+          "cancelled_count": 0,
+          "finalized_count": 0
+        }
+      },
+      "expected": "CANNOT_CANCEL",
+      "returned": "CANNOT_CANCEL",
+      "passed": true
+    },
+    "overspend_vote": {
+      "before": {
+        "ballot": {
+          "ballot_id": 0,
+          "commitment": "29cb4ef21940de8c22795f03f81247ae8e7a2f38b462237f7dcaa7e8f9f75d59",
+          "config": {
+            "budget": 100,
+            "label": "happy_create",
+            "max_selected": 3,
+            "options": [
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 60,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION AUDIT",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Audit priority"
+              },
+              {
+                "author": "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5",
+                "cost": 40,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION INCENTIVES",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Incentive priority"
+              },
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 0,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION REPORTING",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Transparency report"
+              }
+            ],
+            "policy": {
+              "commit": "69437673e180f414efe6565a14b266110427845c",
+              "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+              "marker": "## POLICY Q4",
+              "owner": "Azariavibecode",
+              "path": "/fixtures/agenda.md",
+              "repo": "SlateWeave"
+            },
+            "voters": [
+              "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+              "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+            ]
+          },
+          "consents": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "creator": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+          "graph_digest": "d95599f17ee3609ef9ca2589f284527fd95399d35d20367cf0fe0697adcdb98d",
+          "ground": {
+            "commitment": "29cb4ef21940de8c22795f03f81247ae8e7a2f38b462237f7dcaa7e8f9f75d59",
+            "digest": "b80d0b51a921840186b433075c4d1d454cdd0773193bfb57d11df99aedc3af0c",
+            "options": [
+              "## OPTION AUDIT\n\nAdopt security assurance as Cedar DAO's exclusive Q4 operating priority. During Q4, do not run a liquidity incentive program. Authorize preparing an independent audit engagement. This is a proposed mandate, not evidence that an audit has been purchased or completed.",
+              "## OPTION INCENTIVES\n\nAdopt liquidity incentives as Cedar DAO's exclusive Q4 operating priority. During Q4, do not commission an independent audit engagement. Authorize preparing a liquidity incentive program. This is a proposed mandate, not evidence of any actual token distribution.",
+              "## OPTION REPORTING\n\nPublish a Q4 treasury transparency report. Reporting does not select the operating priority and can accompany either security assurance or liquidity incentives. No external payment or completed publication is asserted."
+            ],
+            "policy": "## POLICY Q4\n\nThis ballot selects the Q4 strategy of the synthetic Cedar DAO. Its strategy can prioritize either security assurance or liquidity incentives exclusively for the quarter, but it cannot adopt both exclusive priorities at once. Treasury transparency reporting may accompany either strategy. Determine pairwise substantive conflicts from the full option texts. Numeric budget and cost constraints are enforced separately by the contract.",
+            "status": "GROUNDED"
+          },
+          "pairs": {
+            "0:1": {
+              "attempts": 1,
+              "binding": "737c0fafaf180d32ea71ae916ce90dd1b41c542685756e365425177de5d3088b",
+              "relation": "MUTUALLY_EXCLUSIVE"
+            },
+            "0:2": {
+              "attempts": 1,
+              "binding": "e6fb85f7413f2b7de06f93d5244cb08295e31b97ef13e284d0986696e623a295",
+              "relation": "COMPATIBLE"
+            },
+            "1:2": {
+              "attempts": 1,
+              "binding": "8db2db2f1446a919628e54bed3f089c61b661ff8182545503d169c7e21302c92",
+              "relation": "COMPATIBLE"
+            }
+          },
+          "participants": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "result": null,
+          "state": "VOTING",
+          "votes": {}
+        },
+        "counts": {
+          "ballot_count": 1,
+          "cancelled_count": 0,
+          "finalized_count": 0
+        }
+      },
+      "after": {
+        "ballot": {
+          "ballot_id": 0,
+          "commitment": "29cb4ef21940de8c22795f03f81247ae8e7a2f38b462237f7dcaa7e8f9f75d59",
+          "config": {
+            "budget": 100,
+            "label": "happy_create",
+            "max_selected": 3,
+            "options": [
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 60,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION AUDIT",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Audit priority"
+              },
+              {
+                "author": "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5",
+                "cost": 40,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION INCENTIVES",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Incentive priority"
+              },
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 0,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION REPORTING",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Transparency report"
+              }
+            ],
+            "policy": {
+              "commit": "69437673e180f414efe6565a14b266110427845c",
+              "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+              "marker": "## POLICY Q4",
+              "owner": "Azariavibecode",
+              "path": "/fixtures/agenda.md",
+              "repo": "SlateWeave"
+            },
+            "voters": [
+              "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+              "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+            ]
+          },
+          "consents": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "creator": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+          "graph_digest": "d95599f17ee3609ef9ca2589f284527fd95399d35d20367cf0fe0697adcdb98d",
+          "ground": {
+            "commitment": "29cb4ef21940de8c22795f03f81247ae8e7a2f38b462237f7dcaa7e8f9f75d59",
+            "digest": "b80d0b51a921840186b433075c4d1d454cdd0773193bfb57d11df99aedc3af0c",
+            "options": [
+              "## OPTION AUDIT\n\nAdopt security assurance as Cedar DAO's exclusive Q4 operating priority. During Q4, do not run a liquidity incentive program. Authorize preparing an independent audit engagement. This is a proposed mandate, not evidence that an audit has been purchased or completed.",
+              "## OPTION INCENTIVES\n\nAdopt liquidity incentives as Cedar DAO's exclusive Q4 operating priority. During Q4, do not commission an independent audit engagement. Authorize preparing a liquidity incentive program. This is a proposed mandate, not evidence of any actual token distribution.",
+              "## OPTION REPORTING\n\nPublish a Q4 treasury transparency report. Reporting does not select the operating priority and can accompany either security assurance or liquidity incentives. No external payment or completed publication is asserted."
+            ],
+            "policy": "## POLICY Q4\n\nThis ballot selects the Q4 strategy of the synthetic Cedar DAO. Its strategy can prioritize either security assurance or liquidity incentives exclusively for the quarter, but it cannot adopt both exclusive priorities at once. Treasury transparency reporting may accompany either strategy. Determine pairwise substantive conflicts from the full option texts. Numeric budget and cost constraints are enforced separately by the contract.",
+            "status": "GROUNDED"
+          },
+          "pairs": {
+            "0:1": {
+              "attempts": 1,
+              "binding": "737c0fafaf180d32ea71ae916ce90dd1b41c542685756e365425177de5d3088b",
+              "relation": "MUTUALLY_EXCLUSIVE"
+            },
+            "0:2": {
+              "attempts": 1,
+              "binding": "e6fb85f7413f2b7de06f93d5244cb08295e31b97ef13e284d0986696e623a295",
+              "relation": "COMPATIBLE"
+            },
+            "1:2": {
+              "attempts": 1,
+              "binding": "8db2db2f1446a919628e54bed3f089c61b661ff8182545503d169c7e21302c92",
+              "relation": "COMPATIBLE"
+            }
+          },
+          "participants": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "result": null,
+          "state": "VOTING",
+          "votes": {}
+        },
+        "counts": {
+          "ballot_count": 1,
+          "cancelled_count": 0,
+          "finalized_count": 0
+        }
+      },
+      "expected": "INVALID_SCORES",
+      "returned": "INVALID_SCORES",
+      "passed": true
+    },
+    "wrong_vote_graph": {
+      "before": {
+        "ballot": {
+          "ballot_id": 0,
+          "commitment": "29cb4ef21940de8c22795f03f81247ae8e7a2f38b462237f7dcaa7e8f9f75d59",
+          "config": {
+            "budget": 100,
+            "label": "happy_create",
+            "max_selected": 3,
+            "options": [
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 60,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION AUDIT",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Audit priority"
+              },
+              {
+                "author": "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5",
+                "cost": 40,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION INCENTIVES",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Incentive priority"
+              },
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 0,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION REPORTING",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Transparency report"
+              }
+            ],
+            "policy": {
+              "commit": "69437673e180f414efe6565a14b266110427845c",
+              "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+              "marker": "## POLICY Q4",
+              "owner": "Azariavibecode",
+              "path": "/fixtures/agenda.md",
+              "repo": "SlateWeave"
+            },
+            "voters": [
+              "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+              "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+            ]
+          },
+          "consents": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "creator": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+          "graph_digest": "d95599f17ee3609ef9ca2589f284527fd95399d35d20367cf0fe0697adcdb98d",
+          "ground": {
+            "commitment": "29cb4ef21940de8c22795f03f81247ae8e7a2f38b462237f7dcaa7e8f9f75d59",
+            "digest": "b80d0b51a921840186b433075c4d1d454cdd0773193bfb57d11df99aedc3af0c",
+            "options": [
+              "## OPTION AUDIT\n\nAdopt security assurance as Cedar DAO's exclusive Q4 operating priority. During Q4, do not run a liquidity incentive program. Authorize preparing an independent audit engagement. This is a proposed mandate, not evidence that an audit has been purchased or completed.",
+              "## OPTION INCENTIVES\n\nAdopt liquidity incentives as Cedar DAO's exclusive Q4 operating priority. During Q4, do not commission an independent audit engagement. Authorize preparing a liquidity incentive program. This is a proposed mandate, not evidence of any actual token distribution.",
+              "## OPTION REPORTING\n\nPublish a Q4 treasury transparency report. Reporting does not select the operating priority and can accompany either security assurance or liquidity incentives. No external payment or completed publication is asserted."
+            ],
+            "policy": "## POLICY Q4\n\nThis ballot selects the Q4 strategy of the synthetic Cedar DAO. Its strategy can prioritize either security assurance or liquidity incentives exclusively for the quarter, but it cannot adopt both exclusive priorities at once. Treasury transparency reporting may accompany either strategy. Determine pairwise substantive conflicts from the full option texts. Numeric budget and cost constraints are enforced separately by the contract.",
+            "status": "GROUNDED"
+          },
+          "pairs": {
+            "0:1": {
+              "attempts": 1,
+              "binding": "737c0fafaf180d32ea71ae916ce90dd1b41c542685756e365425177de5d3088b",
+              "relation": "MUTUALLY_EXCLUSIVE"
+            },
+            "0:2": {
+              "attempts": 1,
+              "binding": "e6fb85f7413f2b7de06f93d5244cb08295e31b97ef13e284d0986696e623a295",
+              "relation": "COMPATIBLE"
+            },
+            "1:2": {
+              "attempts": 1,
+              "binding": "8db2db2f1446a919628e54bed3f089c61b661ff8182545503d169c7e21302c92",
+              "relation": "COMPATIBLE"
+            }
+          },
+          "participants": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "result": null,
+          "state": "VOTING",
+          "votes": {}
+        },
+        "counts": {
+          "ballot_count": 1,
+          "cancelled_count": 0,
+          "finalized_count": 0
+        }
+      },
+      "after": {
+        "ballot": {
+          "ballot_id": 0,
+          "commitment": "29cb4ef21940de8c22795f03f81247ae8e7a2f38b462237f7dcaa7e8f9f75d59",
+          "config": {
+            "budget": 100,
+            "label": "happy_create",
+            "max_selected": 3,
+            "options": [
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 60,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION AUDIT",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Audit priority"
+              },
+              {
+                "author": "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5",
+                "cost": 40,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION INCENTIVES",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Incentive priority"
+              },
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 0,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION REPORTING",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Transparency report"
+              }
+            ],
+            "policy": {
+              "commit": "69437673e180f414efe6565a14b266110427845c",
+              "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+              "marker": "## POLICY Q4",
+              "owner": "Azariavibecode",
+              "path": "/fixtures/agenda.md",
+              "repo": "SlateWeave"
+            },
+            "voters": [
+              "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+              "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+            ]
+          },
+          "consents": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "creator": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+          "graph_digest": "d95599f17ee3609ef9ca2589f284527fd95399d35d20367cf0fe0697adcdb98d",
+          "ground": {
+            "commitment": "29cb4ef21940de8c22795f03f81247ae8e7a2f38b462237f7dcaa7e8f9f75d59",
+            "digest": "b80d0b51a921840186b433075c4d1d454cdd0773193bfb57d11df99aedc3af0c",
+            "options": [
+              "## OPTION AUDIT\n\nAdopt security assurance as Cedar DAO's exclusive Q4 operating priority. During Q4, do not run a liquidity incentive program. Authorize preparing an independent audit engagement. This is a proposed mandate, not evidence that an audit has been purchased or completed.",
+              "## OPTION INCENTIVES\n\nAdopt liquidity incentives as Cedar DAO's exclusive Q4 operating priority. During Q4, do not commission an independent audit engagement. Authorize preparing a liquidity incentive program. This is a proposed mandate, not evidence of any actual token distribution.",
+              "## OPTION REPORTING\n\nPublish a Q4 treasury transparency report. Reporting does not select the operating priority and can accompany either security assurance or liquidity incentives. No external payment or completed publication is asserted."
+            ],
+            "policy": "## POLICY Q4\n\nThis ballot selects the Q4 strategy of the synthetic Cedar DAO. Its strategy can prioritize either security assurance or liquidity incentives exclusively for the quarter, but it cannot adopt both exclusive priorities at once. Treasury transparency reporting may accompany either strategy. Determine pairwise substantive conflicts from the full option texts. Numeric budget and cost constraints are enforced separately by the contract.",
+            "status": "GROUNDED"
+          },
+          "pairs": {
+            "0:1": {
+              "attempts": 1,
+              "binding": "737c0fafaf180d32ea71ae916ce90dd1b41c542685756e365425177de5d3088b",
+              "relation": "MUTUALLY_EXCLUSIVE"
+            },
+            "0:2": {
+              "attempts": 1,
+              "binding": "e6fb85f7413f2b7de06f93d5244cb08295e31b97ef13e284d0986696e623a295",
+              "relation": "COMPATIBLE"
+            },
+            "1:2": {
+              "attempts": 1,
+              "binding": "8db2db2f1446a919628e54bed3f089c61b661ff8182545503d169c7e21302c92",
+              "relation": "COMPATIBLE"
+            }
+          },
+          "participants": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "result": null,
+          "state": "VOTING",
+          "votes": {}
+        },
+        "counts": {
+          "ballot_count": 1,
+          "cancelled_count": 0,
+          "finalized_count": 0
+        }
+      },
+      "expected": "COMMITMENT_MISMATCH",
+      "returned": "COMMITMENT_MISMATCH",
+      "passed": true
+    },
+    "duplicate_vote": {
+      "before": {
+        "ballot": {
+          "ballot_id": 0,
+          "commitment": "29cb4ef21940de8c22795f03f81247ae8e7a2f38b462237f7dcaa7e8f9f75d59",
+          "config": {
+            "budget": 100,
+            "label": "happy_create",
+            "max_selected": 3,
+            "options": [
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 60,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION AUDIT",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Audit priority"
+              },
+              {
+                "author": "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5",
+                "cost": 40,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION INCENTIVES",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Incentive priority"
+              },
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 0,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION REPORTING",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Transparency report"
+              }
+            ],
+            "policy": {
+              "commit": "69437673e180f414efe6565a14b266110427845c",
+              "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+              "marker": "## POLICY Q4",
+              "owner": "Azariavibecode",
+              "path": "/fixtures/agenda.md",
+              "repo": "SlateWeave"
+            },
+            "voters": [
+              "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+              "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+            ]
+          },
+          "consents": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "creator": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+          "graph_digest": "d95599f17ee3609ef9ca2589f284527fd95399d35d20367cf0fe0697adcdb98d",
+          "ground": {
+            "commitment": "29cb4ef21940de8c22795f03f81247ae8e7a2f38b462237f7dcaa7e8f9f75d59",
+            "digest": "b80d0b51a921840186b433075c4d1d454cdd0773193bfb57d11df99aedc3af0c",
+            "options": [
+              "## OPTION AUDIT\n\nAdopt security assurance as Cedar DAO's exclusive Q4 operating priority. During Q4, do not run a liquidity incentive program. Authorize preparing an independent audit engagement. This is a proposed mandate, not evidence that an audit has been purchased or completed.",
+              "## OPTION INCENTIVES\n\nAdopt liquidity incentives as Cedar DAO's exclusive Q4 operating priority. During Q4, do not commission an independent audit engagement. Authorize preparing a liquidity incentive program. This is a proposed mandate, not evidence of any actual token distribution.",
+              "## OPTION REPORTING\n\nPublish a Q4 treasury transparency report. Reporting does not select the operating priority and can accompany either security assurance or liquidity incentives. No external payment or completed publication is asserted."
+            ],
+            "policy": "## POLICY Q4\n\nThis ballot selects the Q4 strategy of the synthetic Cedar DAO. Its strategy can prioritize either security assurance or liquidity incentives exclusively for the quarter, but it cannot adopt both exclusive priorities at once. Treasury transparency reporting may accompany either strategy. Determine pairwise substantive conflicts from the full option texts. Numeric budget and cost constraints are enforced separately by the contract.",
+            "status": "GROUNDED"
+          },
+          "pairs": {
+            "0:1": {
+              "attempts": 1,
+              "binding": "737c0fafaf180d32ea71ae916ce90dd1b41c542685756e365425177de5d3088b",
+              "relation": "MUTUALLY_EXCLUSIVE"
+            },
+            "0:2": {
+              "attempts": 1,
+              "binding": "e6fb85f7413f2b7de06f93d5244cb08295e31b97ef13e284d0986696e623a295",
+              "relation": "COMPATIBLE"
+            },
+            "1:2": {
+              "attempts": 1,
+              "binding": "8db2db2f1446a919628e54bed3f089c61b661ff8182545503d169c7e21302c92",
+              "relation": "COMPATIBLE"
+            }
+          },
+          "participants": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "result": null,
+          "state": "VOTING",
+          "votes": {
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e": [
+              60,
+              0,
+              40
+            ]
+          }
+        },
+        "counts": {
+          "ballot_count": 1,
+          "cancelled_count": 0,
+          "finalized_count": 0
+        }
+      },
+      "after": {
+        "ballot": {
+          "ballot_id": 0,
+          "commitment": "29cb4ef21940de8c22795f03f81247ae8e7a2f38b462237f7dcaa7e8f9f75d59",
+          "config": {
+            "budget": 100,
+            "label": "happy_create",
+            "max_selected": 3,
+            "options": [
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 60,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION AUDIT",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Audit priority"
+              },
+              {
+                "author": "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5",
+                "cost": 40,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION INCENTIVES",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Incentive priority"
+              },
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 0,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION REPORTING",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Transparency report"
+              }
+            ],
+            "policy": {
+              "commit": "69437673e180f414efe6565a14b266110427845c",
+              "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+              "marker": "## POLICY Q4",
+              "owner": "Azariavibecode",
+              "path": "/fixtures/agenda.md",
+              "repo": "SlateWeave"
+            },
+            "voters": [
+              "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+              "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+            ]
+          },
+          "consents": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "creator": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+          "graph_digest": "d95599f17ee3609ef9ca2589f284527fd95399d35d20367cf0fe0697adcdb98d",
+          "ground": {
+            "commitment": "29cb4ef21940de8c22795f03f81247ae8e7a2f38b462237f7dcaa7e8f9f75d59",
+            "digest": "b80d0b51a921840186b433075c4d1d454cdd0773193bfb57d11df99aedc3af0c",
+            "options": [
+              "## OPTION AUDIT\n\nAdopt security assurance as Cedar DAO's exclusive Q4 operating priority. During Q4, do not run a liquidity incentive program. Authorize preparing an independent audit engagement. This is a proposed mandate, not evidence that an audit has been purchased or completed.",
+              "## OPTION INCENTIVES\n\nAdopt liquidity incentives as Cedar DAO's exclusive Q4 operating priority. During Q4, do not commission an independent audit engagement. Authorize preparing a liquidity incentive program. This is a proposed mandate, not evidence of any actual token distribution.",
+              "## OPTION REPORTING\n\nPublish a Q4 treasury transparency report. Reporting does not select the operating priority and can accompany either security assurance or liquidity incentives. No external payment or completed publication is asserted."
+            ],
+            "policy": "## POLICY Q4\n\nThis ballot selects the Q4 strategy of the synthetic Cedar DAO. Its strategy can prioritize either security assurance or liquidity incentives exclusively for the quarter, but it cannot adopt both exclusive priorities at once. Treasury transparency reporting may accompany either strategy. Determine pairwise substantive conflicts from the full option texts. Numeric budget and cost constraints are enforced separately by the contract.",
+            "status": "GROUNDED"
+          },
+          "pairs": {
+            "0:1": {
+              "attempts": 1,
+              "binding": "737c0fafaf180d32ea71ae916ce90dd1b41c542685756e365425177de5d3088b",
+              "relation": "MUTUALLY_EXCLUSIVE"
+            },
+            "0:2": {
+              "attempts": 1,
+              "binding": "e6fb85f7413f2b7de06f93d5244cb08295e31b97ef13e284d0986696e623a295",
+              "relation": "COMPATIBLE"
+            },
+            "1:2": {
+              "attempts": 1,
+              "binding": "8db2db2f1446a919628e54bed3f089c61b661ff8182545503d169c7e21302c92",
+              "relation": "COMPATIBLE"
+            }
+          },
+          "participants": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "result": null,
+          "state": "VOTING",
+          "votes": {
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e": [
+              60,
+              0,
+              40
+            ]
+          }
+        },
+        "counts": {
+          "ballot_count": 1,
+          "cancelled_count": 0,
+          "finalized_count": 0
+        }
+      },
+      "expected": "ALREADY_VOTED",
+      "returned": "ALREADY_VOTED",
+      "passed": true
+    },
+    "finalize_before_all_votes": {
+      "before": {
+        "ballot": {
+          "ballot_id": 0,
+          "commitment": "29cb4ef21940de8c22795f03f81247ae8e7a2f38b462237f7dcaa7e8f9f75d59",
+          "config": {
+            "budget": 100,
+            "label": "happy_create",
+            "max_selected": 3,
+            "options": [
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 60,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION AUDIT",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Audit priority"
+              },
+              {
+                "author": "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5",
+                "cost": 40,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION INCENTIVES",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Incentive priority"
+              },
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 0,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION REPORTING",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Transparency report"
+              }
+            ],
+            "policy": {
+              "commit": "69437673e180f414efe6565a14b266110427845c",
+              "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+              "marker": "## POLICY Q4",
+              "owner": "Azariavibecode",
+              "path": "/fixtures/agenda.md",
+              "repo": "SlateWeave"
+            },
+            "voters": [
+              "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+              "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+            ]
+          },
+          "consents": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "creator": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+          "graph_digest": "d95599f17ee3609ef9ca2589f284527fd95399d35d20367cf0fe0697adcdb98d",
+          "ground": {
+            "commitment": "29cb4ef21940de8c22795f03f81247ae8e7a2f38b462237f7dcaa7e8f9f75d59",
+            "digest": "b80d0b51a921840186b433075c4d1d454cdd0773193bfb57d11df99aedc3af0c",
+            "options": [
+              "## OPTION AUDIT\n\nAdopt security assurance as Cedar DAO's exclusive Q4 operating priority. During Q4, do not run a liquidity incentive program. Authorize preparing an independent audit engagement. This is a proposed mandate, not evidence that an audit has been purchased or completed.",
+              "## OPTION INCENTIVES\n\nAdopt liquidity incentives as Cedar DAO's exclusive Q4 operating priority. During Q4, do not commission an independent audit engagement. Authorize preparing a liquidity incentive program. This is a proposed mandate, not evidence of any actual token distribution.",
+              "## OPTION REPORTING\n\nPublish a Q4 treasury transparency report. Reporting does not select the operating priority and can accompany either security assurance or liquidity incentives. No external payment or completed publication is asserted."
+            ],
+            "policy": "## POLICY Q4\n\nThis ballot selects the Q4 strategy of the synthetic Cedar DAO. Its strategy can prioritize either security assurance or liquidity incentives exclusively for the quarter, but it cannot adopt both exclusive priorities at once. Treasury transparency reporting may accompany either strategy. Determine pairwise substantive conflicts from the full option texts. Numeric budget and cost constraints are enforced separately by the contract.",
+            "status": "GROUNDED"
+          },
+          "pairs": {
+            "0:1": {
+              "attempts": 1,
+              "binding": "737c0fafaf180d32ea71ae916ce90dd1b41c542685756e365425177de5d3088b",
+              "relation": "MUTUALLY_EXCLUSIVE"
+            },
+            "0:2": {
+              "attempts": 1,
+              "binding": "e6fb85f7413f2b7de06f93d5244cb08295e31b97ef13e284d0986696e623a295",
+              "relation": "COMPATIBLE"
+            },
+            "1:2": {
+              "attempts": 1,
+              "binding": "8db2db2f1446a919628e54bed3f089c61b661ff8182545503d169c7e21302c92",
+              "relation": "COMPATIBLE"
+            }
+          },
+          "participants": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "result": null,
+          "state": "VOTING",
+          "votes": {
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e": [
+              60,
+              0,
+              40
+            ]
+          }
+        },
+        "counts": {
+          "ballot_count": 1,
+          "cancelled_count": 0,
+          "finalized_count": 0
+        }
+      },
+      "after": {
+        "ballot": {
+          "ballot_id": 0,
+          "commitment": "29cb4ef21940de8c22795f03f81247ae8e7a2f38b462237f7dcaa7e8f9f75d59",
+          "config": {
+            "budget": 100,
+            "label": "happy_create",
+            "max_selected": 3,
+            "options": [
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 60,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION AUDIT",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Audit priority"
+              },
+              {
+                "author": "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5",
+                "cost": 40,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION INCENTIVES",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Incentive priority"
+              },
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 0,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION REPORTING",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Transparency report"
+              }
+            ],
+            "policy": {
+              "commit": "69437673e180f414efe6565a14b266110427845c",
+              "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+              "marker": "## POLICY Q4",
+              "owner": "Azariavibecode",
+              "path": "/fixtures/agenda.md",
+              "repo": "SlateWeave"
+            },
+            "voters": [
+              "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+              "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+            ]
+          },
+          "consents": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "creator": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+          "graph_digest": "d95599f17ee3609ef9ca2589f284527fd95399d35d20367cf0fe0697adcdb98d",
+          "ground": {
+            "commitment": "29cb4ef21940de8c22795f03f81247ae8e7a2f38b462237f7dcaa7e8f9f75d59",
+            "digest": "b80d0b51a921840186b433075c4d1d454cdd0773193bfb57d11df99aedc3af0c",
+            "options": [
+              "## OPTION AUDIT\n\nAdopt security assurance as Cedar DAO's exclusive Q4 operating priority. During Q4, do not run a liquidity incentive program. Authorize preparing an independent audit engagement. This is a proposed mandate, not evidence that an audit has been purchased or completed.",
+              "## OPTION INCENTIVES\n\nAdopt liquidity incentives as Cedar DAO's exclusive Q4 operating priority. During Q4, do not commission an independent audit engagement. Authorize preparing a liquidity incentive program. This is a proposed mandate, not evidence of any actual token distribution.",
+              "## OPTION REPORTING\n\nPublish a Q4 treasury transparency report. Reporting does not select the operating priority and can accompany either security assurance or liquidity incentives. No external payment or completed publication is asserted."
+            ],
+            "policy": "## POLICY Q4\n\nThis ballot selects the Q4 strategy of the synthetic Cedar DAO. Its strategy can prioritize either security assurance or liquidity incentives exclusively for the quarter, but it cannot adopt both exclusive priorities at once. Treasury transparency reporting may accompany either strategy. Determine pairwise substantive conflicts from the full option texts. Numeric budget and cost constraints are enforced separately by the contract.",
+            "status": "GROUNDED"
+          },
+          "pairs": {
+            "0:1": {
+              "attempts": 1,
+              "binding": "737c0fafaf180d32ea71ae916ce90dd1b41c542685756e365425177de5d3088b",
+              "relation": "MUTUALLY_EXCLUSIVE"
+            },
+            "0:2": {
+              "attempts": 1,
+              "binding": "e6fb85f7413f2b7de06f93d5244cb08295e31b97ef13e284d0986696e623a295",
+              "relation": "COMPATIBLE"
+            },
+            "1:2": {
+              "attempts": 1,
+              "binding": "8db2db2f1446a919628e54bed3f089c61b661ff8182545503d169c7e21302c92",
+              "relation": "COMPATIBLE"
+            }
+          },
+          "participants": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "result": null,
+          "state": "VOTING",
+          "votes": {
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e": [
+              60,
+              0,
+              40
+            ]
+          }
+        },
+        "counts": {
+          "ballot_count": 1,
+          "cancelled_count": 0,
+          "finalized_count": 0
+        }
+      },
+      "expected": "VOTES_INCOMPLETE",
+      "returned": "VOTES_INCOMPLETE",
+      "passed": true
+    },
+    "wrong_finalize_graph": {
+      "before": {
+        "ballot": {
+          "ballot_id": 0,
+          "commitment": "29cb4ef21940de8c22795f03f81247ae8e7a2f38b462237f7dcaa7e8f9f75d59",
+          "config": {
+            "budget": 100,
+            "label": "happy_create",
+            "max_selected": 3,
+            "options": [
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 60,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION AUDIT",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Audit priority"
+              },
+              {
+                "author": "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5",
+                "cost": 40,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION INCENTIVES",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Incentive priority"
+              },
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 0,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION REPORTING",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Transparency report"
+              }
+            ],
+            "policy": {
+              "commit": "69437673e180f414efe6565a14b266110427845c",
+              "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+              "marker": "## POLICY Q4",
+              "owner": "Azariavibecode",
+              "path": "/fixtures/agenda.md",
+              "repo": "SlateWeave"
+            },
+            "voters": [
+              "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+              "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+            ]
+          },
+          "consents": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "creator": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+          "graph_digest": "d95599f17ee3609ef9ca2589f284527fd95399d35d20367cf0fe0697adcdb98d",
+          "ground": {
+            "commitment": "29cb4ef21940de8c22795f03f81247ae8e7a2f38b462237f7dcaa7e8f9f75d59",
+            "digest": "b80d0b51a921840186b433075c4d1d454cdd0773193bfb57d11df99aedc3af0c",
+            "options": [
+              "## OPTION AUDIT\n\nAdopt security assurance as Cedar DAO's exclusive Q4 operating priority. During Q4, do not run a liquidity incentive program. Authorize preparing an independent audit engagement. This is a proposed mandate, not evidence that an audit has been purchased or completed.",
+              "## OPTION INCENTIVES\n\nAdopt liquidity incentives as Cedar DAO's exclusive Q4 operating priority. During Q4, do not commission an independent audit engagement. Authorize preparing a liquidity incentive program. This is a proposed mandate, not evidence of any actual token distribution.",
+              "## OPTION REPORTING\n\nPublish a Q4 treasury transparency report. Reporting does not select the operating priority and can accompany either security assurance or liquidity incentives. No external payment or completed publication is asserted."
+            ],
+            "policy": "## POLICY Q4\n\nThis ballot selects the Q4 strategy of the synthetic Cedar DAO. Its strategy can prioritize either security assurance or liquidity incentives exclusively for the quarter, but it cannot adopt both exclusive priorities at once. Treasury transparency reporting may accompany either strategy. Determine pairwise substantive conflicts from the full option texts. Numeric budget and cost constraints are enforced separately by the contract.",
+            "status": "GROUNDED"
+          },
+          "pairs": {
+            "0:1": {
+              "attempts": 1,
+              "binding": "737c0fafaf180d32ea71ae916ce90dd1b41c542685756e365425177de5d3088b",
+              "relation": "MUTUALLY_EXCLUSIVE"
+            },
+            "0:2": {
+              "attempts": 1,
+              "binding": "e6fb85f7413f2b7de06f93d5244cb08295e31b97ef13e284d0986696e623a295",
+              "relation": "COMPATIBLE"
+            },
+            "1:2": {
+              "attempts": 1,
+              "binding": "8db2db2f1446a919628e54bed3f089c61b661ff8182545503d169c7e21302c92",
+              "relation": "COMPATIBLE"
+            }
+          },
+          "participants": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "result": null,
+          "state": "TALLY_READY",
+          "votes": {
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e": [
+              60,
+              0,
+              40
+            ],
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5": [
+              0,
+              70,
+              30
+            ]
+          }
+        },
+        "counts": {
+          "ballot_count": 1,
+          "cancelled_count": 0,
+          "finalized_count": 0
+        }
+      },
+      "after": {
+        "ballot": {
+          "ballot_id": 0,
+          "commitment": "29cb4ef21940de8c22795f03f81247ae8e7a2f38b462237f7dcaa7e8f9f75d59",
+          "config": {
+            "budget": 100,
+            "label": "happy_create",
+            "max_selected": 3,
+            "options": [
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 60,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION AUDIT",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Audit priority"
+              },
+              {
+                "author": "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5",
+                "cost": 40,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION INCENTIVES",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Incentive priority"
+              },
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 0,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION REPORTING",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Transparency report"
+              }
+            ],
+            "policy": {
+              "commit": "69437673e180f414efe6565a14b266110427845c",
+              "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+              "marker": "## POLICY Q4",
+              "owner": "Azariavibecode",
+              "path": "/fixtures/agenda.md",
+              "repo": "SlateWeave"
+            },
+            "voters": [
+              "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+              "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+            ]
+          },
+          "consents": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "creator": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+          "graph_digest": "d95599f17ee3609ef9ca2589f284527fd95399d35d20367cf0fe0697adcdb98d",
+          "ground": {
+            "commitment": "29cb4ef21940de8c22795f03f81247ae8e7a2f38b462237f7dcaa7e8f9f75d59",
+            "digest": "b80d0b51a921840186b433075c4d1d454cdd0773193bfb57d11df99aedc3af0c",
+            "options": [
+              "## OPTION AUDIT\n\nAdopt security assurance as Cedar DAO's exclusive Q4 operating priority. During Q4, do not run a liquidity incentive program. Authorize preparing an independent audit engagement. This is a proposed mandate, not evidence that an audit has been purchased or completed.",
+              "## OPTION INCENTIVES\n\nAdopt liquidity incentives as Cedar DAO's exclusive Q4 operating priority. During Q4, do not commission an independent audit engagement. Authorize preparing a liquidity incentive program. This is a proposed mandate, not evidence of any actual token distribution.",
+              "## OPTION REPORTING\n\nPublish a Q4 treasury transparency report. Reporting does not select the operating priority and can accompany either security assurance or liquidity incentives. No external payment or completed publication is asserted."
+            ],
+            "policy": "## POLICY Q4\n\nThis ballot selects the Q4 strategy of the synthetic Cedar DAO. Its strategy can prioritize either security assurance or liquidity incentives exclusively for the quarter, but it cannot adopt both exclusive priorities at once. Treasury transparency reporting may accompany either strategy. Determine pairwise substantive conflicts from the full option texts. Numeric budget and cost constraints are enforced separately by the contract.",
+            "status": "GROUNDED"
+          },
+          "pairs": {
+            "0:1": {
+              "attempts": 1,
+              "binding": "737c0fafaf180d32ea71ae916ce90dd1b41c542685756e365425177de5d3088b",
+              "relation": "MUTUALLY_EXCLUSIVE"
+            },
+            "0:2": {
+              "attempts": 1,
+              "binding": "e6fb85f7413f2b7de06f93d5244cb08295e31b97ef13e284d0986696e623a295",
+              "relation": "COMPATIBLE"
+            },
+            "1:2": {
+              "attempts": 1,
+              "binding": "8db2db2f1446a919628e54bed3f089c61b661ff8182545503d169c7e21302c92",
+              "relation": "COMPATIBLE"
+            }
+          },
+          "participants": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "result": null,
+          "state": "TALLY_READY",
+          "votes": {
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e": [
+              60,
+              0,
+              40
+            ],
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5": [
+              0,
+              70,
+              30
+            ]
+          }
+        },
+        "counts": {
+          "ballot_count": 1,
+          "cancelled_count": 0,
+          "finalized_count": 0
+        }
+      },
+      "expected": "COMMITMENT_MISMATCH",
+      "returned": "COMMITMENT_MISMATCH",
+      "passed": true
+    },
+    "finalize_replay": {
+      "before": {
+        "ballot": {
+          "ballot_id": 0,
+          "commitment": "29cb4ef21940de8c22795f03f81247ae8e7a2f38b462237f7dcaa7e8f9f75d59",
+          "config": {
+            "budget": 100,
+            "label": "happy_create",
+            "max_selected": 3,
+            "options": [
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 60,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION AUDIT",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Audit priority"
+              },
+              {
+                "author": "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5",
+                "cost": 40,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION INCENTIVES",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Incentive priority"
+              },
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 0,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION REPORTING",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Transparency report"
+              }
+            ],
+            "policy": {
+              "commit": "69437673e180f414efe6565a14b266110427845c",
+              "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+              "marker": "## POLICY Q4",
+              "owner": "Azariavibecode",
+              "path": "/fixtures/agenda.md",
+              "repo": "SlateWeave"
+            },
+            "voters": [
+              "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+              "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+            ]
+          },
+          "consents": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "creator": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+          "graph_digest": "d95599f17ee3609ef9ca2589f284527fd95399d35d20367cf0fe0697adcdb98d",
+          "ground": {
+            "commitment": "29cb4ef21940de8c22795f03f81247ae8e7a2f38b462237f7dcaa7e8f9f75d59",
+            "digest": "b80d0b51a921840186b433075c4d1d454cdd0773193bfb57d11df99aedc3af0c",
+            "options": [
+              "## OPTION AUDIT\n\nAdopt security assurance as Cedar DAO's exclusive Q4 operating priority. During Q4, do not run a liquidity incentive program. Authorize preparing an independent audit engagement. This is a proposed mandate, not evidence that an audit has been purchased or completed.",
+              "## OPTION INCENTIVES\n\nAdopt liquidity incentives as Cedar DAO's exclusive Q4 operating priority. During Q4, do not commission an independent audit engagement. Authorize preparing a liquidity incentive program. This is a proposed mandate, not evidence of any actual token distribution.",
+              "## OPTION REPORTING\n\nPublish a Q4 treasury transparency report. Reporting does not select the operating priority and can accompany either security assurance or liquidity incentives. No external payment or completed publication is asserted."
+            ],
+            "policy": "## POLICY Q4\n\nThis ballot selects the Q4 strategy of the synthetic Cedar DAO. Its strategy can prioritize either security assurance or liquidity incentives exclusively for the quarter, but it cannot adopt both exclusive priorities at once. Treasury transparency reporting may accompany either strategy. Determine pairwise substantive conflicts from the full option texts. Numeric budget and cost constraints are enforced separately by the contract.",
+            "status": "GROUNDED"
+          },
+          "pairs": {
+            "0:1": {
+              "attempts": 1,
+              "binding": "737c0fafaf180d32ea71ae916ce90dd1b41c542685756e365425177de5d3088b",
+              "relation": "MUTUALLY_EXCLUSIVE"
+            },
+            "0:2": {
+              "attempts": 1,
+              "binding": "e6fb85f7413f2b7de06f93d5244cb08295e31b97ef13e284d0986696e623a295",
+              "relation": "COMPATIBLE"
+            },
+            "1:2": {
+              "attempts": 1,
+              "binding": "8db2db2f1446a919628e54bed3f089c61b661ff8182545503d169c7e21302c92",
+              "relation": "COMPATIBLE"
+            }
+          },
+          "participants": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "result": {
+            "cost": 40,
+            "graph_digest": "d95599f17ee3609ef9ca2589f284527fd95399d35d20367cf0fe0697adcdb98d",
+            "mask": 6,
+            "score": 140,
+            "selected": [
+              1,
+              2
+            ],
+            "tie_break": "FEWEST_OPTIONS_THEN_LOWEST_MASK",
+            "totals": [
+              60,
+              70,
+              70
+            ],
+            "votes_digest": "715c65a5bb67b0dd07e8f31f464cc1b5fbde6e9c414d9ad04771a735881dc72c"
+          },
+          "state": "FINALIZED",
+          "votes": {
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e": [
+              60,
+              0,
+              40
+            ],
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5": [
+              0,
+              70,
+              30
+            ]
+          }
+        },
+        "counts": {
+          "ballot_count": 1,
+          "cancelled_count": 0,
+          "finalized_count": 1
+        }
+      },
+      "after": {
+        "ballot": {
+          "ballot_id": 0,
+          "commitment": "29cb4ef21940de8c22795f03f81247ae8e7a2f38b462237f7dcaa7e8f9f75d59",
+          "config": {
+            "budget": 100,
+            "label": "happy_create",
+            "max_selected": 3,
+            "options": [
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 60,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION AUDIT",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Audit priority"
+              },
+              {
+                "author": "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5",
+                "cost": 40,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION INCENTIVES",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Incentive priority"
+              },
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 0,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION REPORTING",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Transparency report"
+              }
+            ],
+            "policy": {
+              "commit": "69437673e180f414efe6565a14b266110427845c",
+              "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+              "marker": "## POLICY Q4",
+              "owner": "Azariavibecode",
+              "path": "/fixtures/agenda.md",
+              "repo": "SlateWeave"
+            },
+            "voters": [
+              "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+              "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+            ]
+          },
+          "consents": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "creator": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+          "graph_digest": "d95599f17ee3609ef9ca2589f284527fd95399d35d20367cf0fe0697adcdb98d",
+          "ground": {
+            "commitment": "29cb4ef21940de8c22795f03f81247ae8e7a2f38b462237f7dcaa7e8f9f75d59",
+            "digest": "b80d0b51a921840186b433075c4d1d454cdd0773193bfb57d11df99aedc3af0c",
+            "options": [
+              "## OPTION AUDIT\n\nAdopt security assurance as Cedar DAO's exclusive Q4 operating priority. During Q4, do not run a liquidity incentive program. Authorize preparing an independent audit engagement. This is a proposed mandate, not evidence that an audit has been purchased or completed.",
+              "## OPTION INCENTIVES\n\nAdopt liquidity incentives as Cedar DAO's exclusive Q4 operating priority. During Q4, do not commission an independent audit engagement. Authorize preparing a liquidity incentive program. This is a proposed mandate, not evidence of any actual token distribution.",
+              "## OPTION REPORTING\n\nPublish a Q4 treasury transparency report. Reporting does not select the operating priority and can accompany either security assurance or liquidity incentives. No external payment or completed publication is asserted."
+            ],
+            "policy": "## POLICY Q4\n\nThis ballot selects the Q4 strategy of the synthetic Cedar DAO. Its strategy can prioritize either security assurance or liquidity incentives exclusively for the quarter, but it cannot adopt both exclusive priorities at once. Treasury transparency reporting may accompany either strategy. Determine pairwise substantive conflicts from the full option texts. Numeric budget and cost constraints are enforced separately by the contract.",
+            "status": "GROUNDED"
+          },
+          "pairs": {
+            "0:1": {
+              "attempts": 1,
+              "binding": "737c0fafaf180d32ea71ae916ce90dd1b41c542685756e365425177de5d3088b",
+              "relation": "MUTUALLY_EXCLUSIVE"
+            },
+            "0:2": {
+              "attempts": 1,
+              "binding": "e6fb85f7413f2b7de06f93d5244cb08295e31b97ef13e284d0986696e623a295",
+              "relation": "COMPATIBLE"
+            },
+            "1:2": {
+              "attempts": 1,
+              "binding": "8db2db2f1446a919628e54bed3f089c61b661ff8182545503d169c7e21302c92",
+              "relation": "COMPATIBLE"
+            }
+          },
+          "participants": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "result": {
+            "cost": 40,
+            "graph_digest": "d95599f17ee3609ef9ca2589f284527fd95399d35d20367cf0fe0697adcdb98d",
+            "mask": 6,
+            "score": 140,
+            "selected": [
+              1,
+              2
+            ],
+            "tie_break": "FEWEST_OPTIONS_THEN_LOWEST_MASK",
+            "totals": [
+              60,
+              70,
+              70
+            ],
+            "votes_digest": "715c65a5bb67b0dd07e8f31f464cc1b5fbde6e9c414d9ad04771a735881dc72c"
+          },
+          "state": "FINALIZED",
+          "votes": {
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e": [
+              60,
+              0,
+              40
+            ],
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5": [
+              0,
+              70,
+              30
+            ]
+          }
+        },
+        "counts": {
+          "ballot_count": 1,
+          "cancelled_count": 0,
+          "finalized_count": 1
+        }
+      },
+      "expected": "VOTES_INCOMPLETE",
+      "returned": "VOTES_INCOMPLETE",
+      "passed": true
+    },
+    "vote_after_finality": {
+      "before": {
+        "ballot": {
+          "ballot_id": 0,
+          "commitment": "29cb4ef21940de8c22795f03f81247ae8e7a2f38b462237f7dcaa7e8f9f75d59",
+          "config": {
+            "budget": 100,
+            "label": "happy_create",
+            "max_selected": 3,
+            "options": [
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 60,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION AUDIT",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Audit priority"
+              },
+              {
+                "author": "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5",
+                "cost": 40,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION INCENTIVES",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Incentive priority"
+              },
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 0,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION REPORTING",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Transparency report"
+              }
+            ],
+            "policy": {
+              "commit": "69437673e180f414efe6565a14b266110427845c",
+              "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+              "marker": "## POLICY Q4",
+              "owner": "Azariavibecode",
+              "path": "/fixtures/agenda.md",
+              "repo": "SlateWeave"
+            },
+            "voters": [
+              "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+              "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+            ]
+          },
+          "consents": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "creator": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+          "graph_digest": "d95599f17ee3609ef9ca2589f284527fd95399d35d20367cf0fe0697adcdb98d",
+          "ground": {
+            "commitment": "29cb4ef21940de8c22795f03f81247ae8e7a2f38b462237f7dcaa7e8f9f75d59",
+            "digest": "b80d0b51a921840186b433075c4d1d454cdd0773193bfb57d11df99aedc3af0c",
+            "options": [
+              "## OPTION AUDIT\n\nAdopt security assurance as Cedar DAO's exclusive Q4 operating priority. During Q4, do not run a liquidity incentive program. Authorize preparing an independent audit engagement. This is a proposed mandate, not evidence that an audit has been purchased or completed.",
+              "## OPTION INCENTIVES\n\nAdopt liquidity incentives as Cedar DAO's exclusive Q4 operating priority. During Q4, do not commission an independent audit engagement. Authorize preparing a liquidity incentive program. This is a proposed mandate, not evidence of any actual token distribution.",
+              "## OPTION REPORTING\n\nPublish a Q4 treasury transparency report. Reporting does not select the operating priority and can accompany either security assurance or liquidity incentives. No external payment or completed publication is asserted."
+            ],
+            "policy": "## POLICY Q4\n\nThis ballot selects the Q4 strategy of the synthetic Cedar DAO. Its strategy can prioritize either security assurance or liquidity incentives exclusively for the quarter, but it cannot adopt both exclusive priorities at once. Treasury transparency reporting may accompany either strategy. Determine pairwise substantive conflicts from the full option texts. Numeric budget and cost constraints are enforced separately by the contract.",
+            "status": "GROUNDED"
+          },
+          "pairs": {
+            "0:1": {
+              "attempts": 1,
+              "binding": "737c0fafaf180d32ea71ae916ce90dd1b41c542685756e365425177de5d3088b",
+              "relation": "MUTUALLY_EXCLUSIVE"
+            },
+            "0:2": {
+              "attempts": 1,
+              "binding": "e6fb85f7413f2b7de06f93d5244cb08295e31b97ef13e284d0986696e623a295",
+              "relation": "COMPATIBLE"
+            },
+            "1:2": {
+              "attempts": 1,
+              "binding": "8db2db2f1446a919628e54bed3f089c61b661ff8182545503d169c7e21302c92",
+              "relation": "COMPATIBLE"
+            }
+          },
+          "participants": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "result": {
+            "cost": 40,
+            "graph_digest": "d95599f17ee3609ef9ca2589f284527fd95399d35d20367cf0fe0697adcdb98d",
+            "mask": 6,
+            "score": 140,
+            "selected": [
+              1,
+              2
+            ],
+            "tie_break": "FEWEST_OPTIONS_THEN_LOWEST_MASK",
+            "totals": [
+              60,
+              70,
+              70
+            ],
+            "votes_digest": "715c65a5bb67b0dd07e8f31f464cc1b5fbde6e9c414d9ad04771a735881dc72c"
+          },
+          "state": "FINALIZED",
+          "votes": {
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e": [
+              60,
+              0,
+              40
+            ],
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5": [
+              0,
+              70,
+              30
+            ]
+          }
+        },
+        "counts": {
+          "ballot_count": 1,
+          "cancelled_count": 0,
+          "finalized_count": 1
+        }
+      },
+      "after": {
+        "ballot": {
+          "ballot_id": 0,
+          "commitment": "29cb4ef21940de8c22795f03f81247ae8e7a2f38b462237f7dcaa7e8f9f75d59",
+          "config": {
+            "budget": 100,
+            "label": "happy_create",
+            "max_selected": 3,
+            "options": [
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 60,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION AUDIT",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Audit priority"
+              },
+              {
+                "author": "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5",
+                "cost": 40,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION INCENTIVES",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Incentive priority"
+              },
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 0,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION REPORTING",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Transparency report"
+              }
+            ],
+            "policy": {
+              "commit": "69437673e180f414efe6565a14b266110427845c",
+              "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+              "marker": "## POLICY Q4",
+              "owner": "Azariavibecode",
+              "path": "/fixtures/agenda.md",
+              "repo": "SlateWeave"
+            },
+            "voters": [
+              "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+              "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+            ]
+          },
+          "consents": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "creator": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+          "graph_digest": "d95599f17ee3609ef9ca2589f284527fd95399d35d20367cf0fe0697adcdb98d",
+          "ground": {
+            "commitment": "29cb4ef21940de8c22795f03f81247ae8e7a2f38b462237f7dcaa7e8f9f75d59",
+            "digest": "b80d0b51a921840186b433075c4d1d454cdd0773193bfb57d11df99aedc3af0c",
+            "options": [
+              "## OPTION AUDIT\n\nAdopt security assurance as Cedar DAO's exclusive Q4 operating priority. During Q4, do not run a liquidity incentive program. Authorize preparing an independent audit engagement. This is a proposed mandate, not evidence that an audit has been purchased or completed.",
+              "## OPTION INCENTIVES\n\nAdopt liquidity incentives as Cedar DAO's exclusive Q4 operating priority. During Q4, do not commission an independent audit engagement. Authorize preparing a liquidity incentive program. This is a proposed mandate, not evidence of any actual token distribution.",
+              "## OPTION REPORTING\n\nPublish a Q4 treasury transparency report. Reporting does not select the operating priority and can accompany either security assurance or liquidity incentives. No external payment or completed publication is asserted."
+            ],
+            "policy": "## POLICY Q4\n\nThis ballot selects the Q4 strategy of the synthetic Cedar DAO. Its strategy can prioritize either security assurance or liquidity incentives exclusively for the quarter, but it cannot adopt both exclusive priorities at once. Treasury transparency reporting may accompany either strategy. Determine pairwise substantive conflicts from the full option texts. Numeric budget and cost constraints are enforced separately by the contract.",
+            "status": "GROUNDED"
+          },
+          "pairs": {
+            "0:1": {
+              "attempts": 1,
+              "binding": "737c0fafaf180d32ea71ae916ce90dd1b41c542685756e365425177de5d3088b",
+              "relation": "MUTUALLY_EXCLUSIVE"
+            },
+            "0:2": {
+              "attempts": 1,
+              "binding": "e6fb85f7413f2b7de06f93d5244cb08295e31b97ef13e284d0986696e623a295",
+              "relation": "COMPATIBLE"
+            },
+            "1:2": {
+              "attempts": 1,
+              "binding": "8db2db2f1446a919628e54bed3f089c61b661ff8182545503d169c7e21302c92",
+              "relation": "COMPATIBLE"
+            }
+          },
+          "participants": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "result": {
+            "cost": 40,
+            "graph_digest": "d95599f17ee3609ef9ca2589f284527fd95399d35d20367cf0fe0697adcdb98d",
+            "mask": 6,
+            "score": 140,
+            "selected": [
+              1,
+              2
+            ],
+            "tie_break": "FEWEST_OPTIONS_THEN_LOWEST_MASK",
+            "totals": [
+              60,
+              70,
+              70
+            ],
+            "votes_digest": "715c65a5bb67b0dd07e8f31f464cc1b5fbde6e9c414d9ad04771a735881dc72c"
+          },
+          "state": "FINALIZED",
+          "votes": {
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e": [
+              60,
+              0,
+              40
+            ],
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5": [
+              0,
+              70,
+              30
+            ]
+          }
+        },
+        "counts": {
+          "ballot_count": 1,
+          "cancelled_count": 0,
+          "finalized_count": 1
+        }
+      },
+      "expected": "WRONG_PHASE",
+      "returned": "WRONG_PHASE",
+      "passed": true
+    },
+    "source_failure": {
+      "before": {
+        "ballot": {
+          "ballot_id": 1,
+          "commitment": "3dcb6653d8932079c8de3da6ea8a5f9ba5ec505163f316a34d4f504e3103d1f7",
+          "config": {
+            "budget": 100,
+            "label": "source_failure_create",
+            "max_selected": 3,
+            "options": [
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 60,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION AUDIT",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Audit priority"
+              },
+              {
+                "author": "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5",
+                "cost": 40,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION INCENTIVES",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Incentive priority"
+              },
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 0,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION REPORTING",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Transparency report"
+              }
+            ],
+            "policy": {
+              "commit": "69437673e180f414efe6565a14b266110427845c",
+              "digest": "0000000000000000000000000000000000000000000000000000000000000000",
+              "marker": "## POLICY Q4",
+              "owner": "Azariavibecode",
+              "path": "/fixtures/agenda.md",
+              "repo": "SlateWeave"
+            },
+            "voters": [
+              "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+              "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+            ]
+          },
+          "consents": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "creator": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+          "graph_digest": "",
+          "pairs": {},
+          "participants": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "result": null,
+          "state": "READY_TO_GROUND",
+          "votes": {}
+        },
+        "counts": {
+          "ballot_count": 2,
+          "cancelled_count": 0,
+          "finalized_count": 1
+        }
+      },
+      "after": {
+        "ballot": {
+          "ballot_id": 1,
+          "commitment": "3dcb6653d8932079c8de3da6ea8a5f9ba5ec505163f316a34d4f504e3103d1f7",
+          "config": {
+            "budget": 100,
+            "label": "source_failure_create",
+            "max_selected": 3,
+            "options": [
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 60,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION AUDIT",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Audit priority"
+              },
+              {
+                "author": "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5",
+                "cost": 40,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION INCENTIVES",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Incentive priority"
+              },
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 0,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION REPORTING",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Transparency report"
+              }
+            ],
+            "policy": {
+              "commit": "69437673e180f414efe6565a14b266110427845c",
+              "digest": "0000000000000000000000000000000000000000000000000000000000000000",
+              "marker": "## POLICY Q4",
+              "owner": "Azariavibecode",
+              "path": "/fixtures/agenda.md",
+              "repo": "SlateWeave"
+            },
+            "voters": [
+              "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+              "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+            ]
+          },
+          "consents": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "creator": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+          "graph_digest": "",
+          "pairs": {},
+          "participants": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "result": null,
+          "state": "READY_TO_GROUND",
+          "votes": {}
+        },
+        "counts": {
+          "ballot_count": 2,
+          "cancelled_count": 0,
+          "finalized_count": 1
+        }
+      },
+      "expected": "SOURCE_UNVERIFIED",
+      "returned": "SOURCE_UNVERIFIED",
+      "passed": true
+    },
+    "unauthorized_cancel": {
+      "before": {
+        "ballot": {
+          "ballot_id": 1,
+          "commitment": "3dcb6653d8932079c8de3da6ea8a5f9ba5ec505163f316a34d4f504e3103d1f7",
+          "config": {
+            "budget": 100,
+            "label": "source_failure_create",
+            "max_selected": 3,
+            "options": [
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 60,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION AUDIT",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Audit priority"
+              },
+              {
+                "author": "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5",
+                "cost": 40,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION INCENTIVES",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Incentive priority"
+              },
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 0,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION REPORTING",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Transparency report"
+              }
+            ],
+            "policy": {
+              "commit": "69437673e180f414efe6565a14b266110427845c",
+              "digest": "0000000000000000000000000000000000000000000000000000000000000000",
+              "marker": "## POLICY Q4",
+              "owner": "Azariavibecode",
+              "path": "/fixtures/agenda.md",
+              "repo": "SlateWeave"
+            },
+            "voters": [
+              "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+              "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+            ]
+          },
+          "consents": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "creator": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+          "graph_digest": "",
+          "pairs": {},
+          "participants": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "result": null,
+          "state": "READY_TO_GROUND",
+          "votes": {}
+        },
+        "counts": {
+          "ballot_count": 2,
+          "cancelled_count": 0,
+          "finalized_count": 1
+        }
+      },
+      "after": {
+        "ballot": {
+          "ballot_id": 1,
+          "commitment": "3dcb6653d8932079c8de3da6ea8a5f9ba5ec505163f316a34d4f504e3103d1f7",
+          "config": {
+            "budget": 100,
+            "label": "source_failure_create",
+            "max_selected": 3,
+            "options": [
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 60,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION AUDIT",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Audit priority"
+              },
+              {
+                "author": "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5",
+                "cost": 40,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION INCENTIVES",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Incentive priority"
+              },
+              {
+                "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+                "cost": 0,
+                "source": {
+                  "commit": "69437673e180f414efe6565a14b266110427845c",
+                  "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+                  "marker": "## OPTION REPORTING",
+                  "owner": "Azariavibecode",
+                  "path": "/fixtures/agenda.md",
+                  "repo": "SlateWeave"
+                },
+                "title": "Transparency report"
+              }
+            ],
+            "policy": {
+              "commit": "69437673e180f414efe6565a14b266110427845c",
+              "digest": "0000000000000000000000000000000000000000000000000000000000000000",
+              "marker": "## POLICY Q4",
+              "owner": "Azariavibecode",
+              "path": "/fixtures/agenda.md",
+              "repo": "SlateWeave"
+            },
+            "voters": [
+              "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+              "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+            ]
+          },
+          "consents": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "creator": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+          "graph_digest": "",
+          "pairs": {},
+          "participants": [
+            "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+            "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+          ],
+          "result": null,
+          "state": "READY_TO_GROUND",
+          "votes": {}
+        },
+        "counts": {
+          "ballot_count": 2,
+          "cancelled_count": 0,
+          "finalized_count": 1
+        }
+      },
+      "expected": "CREATOR_ONLY",
+      "returned": "CREATOR_ONLY",
+      "passed": true
     }
   },
   "deployment": {
@@ -1545,5 +4864,142 @@
     "result": null,
     "state": "GRAPH_READY",
     "votes": {}
-  }
+  },
+  "final_ballot": {
+    "ballot_id": 0,
+    "commitment": "29cb4ef21940de8c22795f03f81247ae8e7a2f38b462237f7dcaa7e8f9f75d59",
+    "config": {
+      "budget": 100,
+      "label": "happy_create",
+      "max_selected": 3,
+      "options": [
+        {
+          "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+          "cost": 60,
+          "source": {
+            "commit": "69437673e180f414efe6565a14b266110427845c",
+            "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+            "marker": "## OPTION AUDIT",
+            "owner": "Azariavibecode",
+            "path": "/fixtures/agenda.md",
+            "repo": "SlateWeave"
+          },
+          "title": "Audit priority"
+        },
+        {
+          "author": "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5",
+          "cost": 40,
+          "source": {
+            "commit": "69437673e180f414efe6565a14b266110427845c",
+            "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+            "marker": "## OPTION INCENTIVES",
+            "owner": "Azariavibecode",
+            "path": "/fixtures/agenda.md",
+            "repo": "SlateWeave"
+          },
+          "title": "Incentive priority"
+        },
+        {
+          "author": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+          "cost": 0,
+          "source": {
+            "commit": "69437673e180f414efe6565a14b266110427845c",
+            "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+            "marker": "## OPTION REPORTING",
+            "owner": "Azariavibecode",
+            "path": "/fixtures/agenda.md",
+            "repo": "SlateWeave"
+          },
+          "title": "Transparency report"
+        }
+      ],
+      "policy": {
+        "commit": "69437673e180f414efe6565a14b266110427845c",
+        "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220",
+        "marker": "## POLICY Q4",
+        "owner": "Azariavibecode",
+        "path": "/fixtures/agenda.md",
+        "repo": "SlateWeave"
+      },
+      "voters": [
+        "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+        "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+      ]
+    },
+    "consents": [
+      "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+      "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+    ],
+    "creator": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+    "graph_digest": "d95599f17ee3609ef9ca2589f284527fd95399d35d20367cf0fe0697adcdb98d",
+    "ground": {
+      "commitment": "29cb4ef21940de8c22795f03f81247ae8e7a2f38b462237f7dcaa7e8f9f75d59",
+      "digest": "b80d0b51a921840186b433075c4d1d454cdd0773193bfb57d11df99aedc3af0c",
+      "options": [
+        "## OPTION AUDIT\n\nAdopt security assurance as Cedar DAO's exclusive Q4 operating priority. During Q4, do not run a liquidity incentive program. Authorize preparing an independent audit engagement. This is a proposed mandate, not evidence that an audit has been purchased or completed.",
+        "## OPTION INCENTIVES\n\nAdopt liquidity incentives as Cedar DAO's exclusive Q4 operating priority. During Q4, do not commission an independent audit engagement. Authorize preparing a liquidity incentive program. This is a proposed mandate, not evidence of any actual token distribution.",
+        "## OPTION REPORTING\n\nPublish a Q4 treasury transparency report. Reporting does not select the operating priority and can accompany either security assurance or liquidity incentives. No external payment or completed publication is asserted."
+      ],
+      "policy": "## POLICY Q4\n\nThis ballot selects the Q4 strategy of the synthetic Cedar DAO. Its strategy can prioritize either security assurance or liquidity incentives exclusively for the quarter, but it cannot adopt both exclusive priorities at once. Treasury transparency reporting may accompany either strategy. Determine pairwise substantive conflicts from the full option texts. Numeric budget and cost constraints are enforced separately by the contract.",
+      "status": "GROUNDED"
+    },
+    "pairs": {
+      "0:1": {
+        "attempts": 1,
+        "binding": "737c0fafaf180d32ea71ae916ce90dd1b41c542685756e365425177de5d3088b",
+        "relation": "MUTUALLY_EXCLUSIVE"
+      },
+      "0:2": {
+        "attempts": 1,
+        "binding": "e6fb85f7413f2b7de06f93d5244cb08295e31b97ef13e284d0986696e623a295",
+        "relation": "COMPATIBLE"
+      },
+      "1:2": {
+        "attempts": 1,
+        "binding": "8db2db2f1446a919628e54bed3f089c61b661ff8182545503d169c7e21302c92",
+        "relation": "COMPATIBLE"
+      }
+    },
+    "participants": [
+      "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+      "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5"
+    ],
+    "result": {
+      "cost": 40,
+      "graph_digest": "d95599f17ee3609ef9ca2589f284527fd95399d35d20367cf0fe0697adcdb98d",
+      "mask": 6,
+      "score": 140,
+      "selected": [
+        1,
+        2
+      ],
+      "tie_break": "FEWEST_OPTIONS_THEN_LOWEST_MASK",
+      "totals": [
+        60,
+        70,
+        70
+      ],
+      "votes_digest": "715c65a5bb67b0dd07e8f31f464cc1b5fbde6e9c414d9ad04771a735881dc72c"
+    },
+    "state": "FINALIZED",
+    "votes": {
+      "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e": [
+        60,
+        0,
+        40
+      ],
+      "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5": [
+        0,
+        70,
+        30
+      ]
+    }
+  },
+  "final_counts": {
+    "ballot_count": 2,
+    "cancelled_count": 1,
+    "finalized_count": 1
+  },
+  "conflict_observed": false,
+  "completed_at": "2026-10-15T04:42:22.743Z"
 }

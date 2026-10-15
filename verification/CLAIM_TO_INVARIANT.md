@@ -8,6 +8,6 @@
 | One vote per named voter | Exact sender, commitment, graph; immutable vote vector | Wrong actor, bad vector, double vote, wrong graph tests | Signed forbidden transactions plus equality |
 | Coherent winning slate | Feasible subset with optimal deterministic score | Full lifecycle plus independent combinations reference across six budgets | Actual votes, winning mask, recomputation |
 | Terminal integrity | Finalized/cancelled ballot cannot reopen | Finalize/vote/consent/cancel replay tests | Returned rejection codes and exact snapshots |
-| Honest UI success | Finalized consensus + leader success + exact object readback | Eight transport/action tests | UI/SDK readback tied to deployment/IDs |
+| Honest UI success | Finalized consensus + leader success + exact object readback | Nine transport/action/ID tests | UI/SDK readback tied to deployment/IDs |
 
-Local tests do not establish any entry in the final column. Those are release gates awaiting a new SlateWeave deployment and public fixture commit.
+Local tests do not establish any entry in the final column. Executed live cases and their exact coverage are recorded in [STUDIONET_E2E.md](STUDIONET_E2E.md), separately from the prospective plan. Source variants, outsider voting and cross-ballot attacks remain direct-runtime evidence unless an exact live transaction is listed. Browser evidence is read-only synchronization, not browser-wallet signing. A proposal's semantic conflict must not be presented as natural validator disagreement.

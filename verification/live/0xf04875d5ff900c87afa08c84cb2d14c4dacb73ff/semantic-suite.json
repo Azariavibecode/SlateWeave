@@ -1,0 +1,36 @@
+{
+  "address": "0xf04875D5FF900C87aFa08C84cb2D14c4daCb73Ff",
+  "chain_id": 61999,
+  "network": "StudioNet",
+  "started_at": "2026-10-15T04:42:36.552Z",
+  "fixture": {
+    "owner": "Azariavibecode",
+    "repo": "SlateWeave",
+    "commit": "69437673e180f414efe6565a14b266110427845c",
+    "path": "/fixtures/agenda.md",
+    "digest": "cf32b7eefa58525a01e381d4f87827cc0d95972efcb5f6e82039b7aaf6f57220"
+  },
+  "wallets": [
+    "0x67A1A08Fc4cf7D05c859d0d3D8398a3A30B1677e",
+    "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5"
+  ],
+  "expected_before_execution": {
+    "ambiguous": "INSUFFICIENT three times then UNRESOLVED; voting blocked",
+    "injection": "MUTUALLY_EXCLUSIVE; embedded command has no authority",
+    "replay": "Resolved pair unchanged"
+  },
+  "transactions": [
+    {
+      "label": "ambiguous_create",
+      "hash": "0xf4a127535955a10b9c0bbfc5825ecefb4bf09dd0ba1b2cea137424218d04aade",
+      "actor": "0x67A1A08Fc4cf7D05c859d0d3D8398a3A30B1677e",
+      "method": "create_ballot",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0xf4a127535955a10b9c0bbfc5825ecefb4bf09dd0ba1b2cea137424218d04aade"
+    }
+  ],
+  "cases": {},
+  "deployment": {
+    "source_matches": true,
+    "source_sha256": "d4ace3bea0f610214af25fa8f99d7e5613d083dde0d57e22b05bed70236a5bfc"
+  }
+}

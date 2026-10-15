@@ -1,0 +1,129 @@
+{
+  "verified_at": "2026-10-15T04:34:27.623Z",
+  "contract": "0xf04875D5FF900C87aFa08C84cb2D14c4daCb73Ff",
+  "ballot_id": 0,
+  "method": "Independent recursive combinations enumeration, ranked by score then count then mask; no contract code imported",
+  "actual_votes": {
+    "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e": [
+      60,
+      0,
+      40
+    ],
+    "0x7c87b10a3d43f3b3551414401f8b26b9f662bab5": [
+      0,
+      70,
+      30
+    ]
+  },
+  "totals": [
+    60,
+    70,
+    70
+  ],
+  "evaluated_subsets": [
+    {
+      "selected": [],
+      "cost": 0,
+      "score": 0,
+      "mask": 0,
+      "feasible": true
+    },
+    {
+      "selected": [
+        2
+      ],
+      "cost": 0,
+      "score": 70,
+      "mask": 4,
+      "feasible": true
+    },
+    {
+      "selected": [
+        1
+      ],
+      "cost": 40,
+      "score": 70,
+      "mask": 2,
+      "feasible": true
+    },
+    {
+      "selected": [
+        1,
+        2
+      ],
+      "cost": 40,
+      "score": 140,
+      "mask": 6,
+      "feasible": true
+    },
+    {
+      "selected": [
+        0
+      ],
+      "cost": 60,
+      "score": 60,
+      "mask": 1,
+      "feasible": true
+    },
+    {
+      "selected": [
+        0,
+        2
+      ],
+      "cost": 60,
+      "score": 130,
+      "mask": 5,
+      "feasible": true
+    },
+    {
+      "selected": [
+        0,
+        1
+      ],
+      "cost": 100,
+      "score": 130,
+      "mask": 3,
+      "feasible": false
+    },
+    {
+      "selected": [
+        0,
+        1,
+        2
+      ],
+      "cost": 100,
+      "score": 200,
+      "mask": 7,
+      "feasible": false
+    }
+  ],
+  "expected": {
+    "selected": [
+      1,
+      2
+    ],
+    "cost": 40,
+    "score": 140,
+    "mask": 6,
+    "feasible": true
+  },
+  "actual_result": {
+    "cost": 40,
+    "graph_digest": "d95599f17ee3609ef9ca2589f284527fd95399d35d20367cf0fe0697adcdb98d",
+    "mask": 6,
+    "score": 140,
+    "selected": [
+      1,
+      2
+    ],
+    "tie_break": "FEWEST_OPTIONS_THEN_LOWEST_MASK",
+    "totals": [
+      60,
+      70,
+      70
+    ],
+    "votes_digest": "715c65a5bb67b0dd07e8f31f464cc1b5fbde6e9c414d9ad04771a735881dc72c"
+  },
+  "passed": true,
+  "scope": "Checks the recorded authoritative final ballot; raw live RPC/finality evidence is in studionet-suite.json"
+}

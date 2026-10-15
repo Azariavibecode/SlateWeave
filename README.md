@@ -65,4 +65,6 @@ See [architecture](docs/ARCHITECTURE.md), [threat model](docs/THREAT_MODEL.md), 
 
 ## Current verification status
 
-45 direct contract tests and 8 UI transport/action tests pass. Production frontend builds. Desktop and mobile initial-screen/form checks have been performed. The deployed source exactly matches the repository file. Live SDK E2E is recorded under `verification/live/0xf04875d5ff900c87afa08c84cb2d14c4dacb73ff/`; only finalized recorded transactions constitute live evidence, not the prospective test plan or local mock results.
+For independent wallet testing, follow the [reviewer guide](docs/REVIEWER_GUIDE.md). A reviewer can create a one-wallet ballot without access to the deployer or the two evidence wallets.
+
+45 direct contract tests and 9 UI transport/action/ID tests pass. Production frontend builds. Desktop and mobile initial-screen/form checks have been performed. The deployed source exactly matches the repository file. Live SDK E2E is recorded under `verification/live/0xf04875d5ff900c87afa08c84cb2d14c4dacb73ff/`; only finalized recorded transactions constitute live evidence, not the prospective test plan or local mock results.
